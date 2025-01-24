@@ -6,4 +6,4 @@ category: Jekyll
 layout: post
 ---
 
-mail@vulnyx.com
+`mail@vulnyx.com`
