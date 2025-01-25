@@ -58,6 +58,7 @@ collections:
     permalink: /:collection/:path/
 
 ordered_collections:
+  - service
   - posts
   - pages
   - others
