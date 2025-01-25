@@ -6,4 +6,4 @@ category: Jekyll
 layout: post
 ---
 
-:email: You can contact us at: [mail@vulnyx.com](mailto:mail@vulnyx.com)
+📧 [Mail](mailto:mail@vulnyx.com)
