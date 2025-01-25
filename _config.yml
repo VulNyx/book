@@ -1,6 +1,6 @@
 # Configurations
 title:            NYX Blog
-longtitle:        NYX Blogg
+longtitle:        NYX Blog 2
 author:           d4t4s3c
 email:            mail@vulnyx.com
 description: >
@@ -35,7 +35,6 @@ kramdown:
   syntax_highlighter:     rouge
   syntax_highlighter_opts:
     guess_lang:           true
-    line_numbers:         true
 
 syntax_highlighter_style: github
 
