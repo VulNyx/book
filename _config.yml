@@ -4,7 +4,7 @@ longtitle:        NYX Blog 2
 author:           d4t4s3c
 email:            mail@vulnyx.com
 description: >
-  Build Jekyll site with the GitBook style.
+  The hacker blog full of tricks for the playground.
 
 version:          1.0
 gitbook_version:  3.2.3
