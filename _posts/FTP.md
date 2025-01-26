@@ -26,7 +26,8 @@ When [Nmap](https://nmap.org) cannot obtain the service header directly, it uses
 ```ruby
 nc -vn 192.168.1.2 21
 timeout 0.1 bash -c "nc -nv 192.168.1.2 21"
-nmap -sVC -p21 192.168.1.2
+nmap -p21 -sS 192.168.1.2
+nmap -p21 -sVC -p21 192.168.1.2
 nmap -p21 --script="ftp-anon" 192.168.1.2
 nmap -p21 --script="ftp-*" 192.168.1.2
 ```
@@ -90,6 +91,15 @@ ftp> rename cmd.php
 ftp> less .htaccess
 ftp> more .htaccess
 ```
+
+---
+
+
+### Remote Code Execution (RCE)
+
+#### Log Poisoning
+
+
 
 ---
 
