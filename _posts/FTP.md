@@ -1,7 +1,7 @@
 ---
 title: 🟢 21 FTP (TCP)
 author: d4t4s3c
-date: 2025-01-26
+date:
 category: Jekyll
 layout: post
 ---
