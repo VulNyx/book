@@ -50,22 +50,25 @@ exclude:
   - _drafts
 
 collections:
-  pages:
+  service:
     output: true
     permalink: /:collection/:path/
+  #pages:
+  #  output: true
+  #  permalink: /:collection/:path/
   ad:
     output: true
     permalink: /:collection/:path/  
-  others:
-    output: true
-    permalink: /:collection/:path/
+  #others:
+  #  output: true
+  #  permalink: /:collection/:path/
 
 ordered_collections:
   - service
-  - posts
+  #- posts
   - ad
-  - pages
-  - others
+  #- pages
+  #- others
 
 page_width: 800px
 
