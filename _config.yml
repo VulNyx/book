@@ -50,23 +50,28 @@ exclude:
   - _drafts
 
 collections:
+  os:
+    output: true
+    permalink: /:collection/:path/
   service:
     output: true
     permalink: /:collection/:path/
+  ad:
+    output: true
+    permalink: /:collection/:path/ 
   #pages:
   #  output: true
   #  permalink: /:collection/:path/
-  ad:
-    output: true
-    permalink: /:collection/:path/  
+ 
   #others:
   #  output: true
   #  permalink: /:collection/:path/
 
 ordered_collections:
+  - os
   - service
-  #- posts
   - ad
+  #- posts
   #- pages
   #- others
 
