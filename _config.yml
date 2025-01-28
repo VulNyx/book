@@ -62,8 +62,8 @@ collections:
 
 ordered_collections:
   - service
-  - ad
   - posts
+  - ad
   - pages
   - others
 
