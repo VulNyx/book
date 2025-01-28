@@ -85,6 +85,8 @@ page_width: 1000px
 destination:      ./_site
 incremental:      false
 regenerate:       true
+
+# fix to accept future years (will allow using the year as an ID to sort items)
 future:           true
 
 plugins:
