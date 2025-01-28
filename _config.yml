@@ -50,12 +50,12 @@ exclude:
   - _drafts
 
 collections:
-  ad:
-    output: true
-    permalink: /:collection/:path/
   pages:
     output: true
     permalink: /:collection/:path/
+  ad:
+    output: true
+    permalink: /:collection/:path/  
   others:
     output: true
     permalink: /:collection/:path/
