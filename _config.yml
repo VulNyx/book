@@ -79,7 +79,8 @@ ordered_collections:
   #- pages
   #- others
 
-page_width: 800px
+# default 800px
+page_width: 900px
 
 destination:      ./_site
 incremental:      false
