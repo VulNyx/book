@@ -58,7 +58,10 @@ collections:
     permalink: /:collection/:path/
   ad:
     output: true
-    permalink: /:collection/:path/ 
+    permalink: /:collection/:path/
+  web:
+    output: true
+    permalink: /:collection/:path/
   #pages:
   #  output: true
   #  permalink: /:collection/:path/
@@ -71,6 +74,7 @@ ordered_collections:
   - os
   - service
   - ad
+  - web
   #- posts
   #- pages
   #- others
