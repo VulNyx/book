@@ -237,7 +237,7 @@ systemctl status vsftpd
 
 ---
 
-### Disclaimer
+#### Disclaimer
 
 > ##### WARNING
 > All tools in this repository are intended for educational, ethical purposes only. The VulNyx team is not responsible for any misuse or damage caused by the improper use of these tools to third-party systems or infrastructures.
