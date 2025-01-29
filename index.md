@@ -32,7 +32,7 @@ Contributing is easy, follow these steps to add new content or improve existing 
 
 Directory structure by categories:
 - [_os](https://github.com/VulNyx/vulnyx.github.io/tree/master/_os) - Operating System (Linux/Windows)
-- [_network](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general) - Network (Techniques that involve networks)
+- [_network](https://github.com/VulNyx/vulnyx.github.io/tree/master/_network) - Network (Techniques that involve networks)
 - [_general](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general) - General (Topics without a specific category)
 - [_service](https://github.com/VulNyx/vulnyx.github.io/tree/master/_service) - Services (Services, ports and protocols)
 - [_ad](https://github.com/VulNyx/vulnyx.github.io/tree/master/_ad) - Active Directory (Only attacks on AD)
