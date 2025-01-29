@@ -1,5 +1,5 @@
 ---
-title: **{{ 21 FTP }}**
+title: __{{ FTP }}__
 date: 0021-01-01
 layout: post
 ---
