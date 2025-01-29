@@ -10,11 +10,12 @@ permalink: /
 
 <br>
 
+# Overview
+
 Hello, **Hackers**! Welcome to the **NYX Blog**!  
 This **Cybersecurity** blog has been created by the **[Vulnyx](https://vulnyx.com)** team.  
 Here you will find a well-organized and visually appealing collection of **Penetration Testing** and **Red Team Operations** methodologies, which you can use both in real-world environments and in our vulnerable machine challenges in the playground.  
 Our goal is to provide you with a well-structured guide, to improve your skills and face new challenges in **Offensive Security**.  
-
 
 ---
 
@@ -35,7 +36,7 @@ Contributing is easy, follow these steps to add new content or improve existing 
 
 Directory structure by categories:
 - [_os](https://github.com/VulNyx/vulnyx.github.io/tree/master/_os) - Operating System (Linux/Windows)
-- [_network](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general) - Network (techniques that involve networks)
+- [_network](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general) - Network (Techniques that involve networks)
 - [_general](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general) - General (Topics without a specific category)
 - [_service](https://github.com/VulNyx/vulnyx.github.io/tree/master/_service) - Services (Services, ports and protocols)
 - [_ad](https://github.com/VulNyx/vulnyx.github.io/tree/master/_ad) - Active Directory (Only attacks on AD)
