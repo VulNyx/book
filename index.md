@@ -20,6 +20,10 @@ Our goal is to provide you with a well-structured guide, to improve your skills 
 
 # Contribute
 
+**NYX Blog** is a [collaborative](https://github.com/VulNyx/vulnyx.github.io/graphs/contributors) project and your input is essential.  
+Anyone can contribute by sharing methodologies, guides, fixes or new ideas to improve this resource.  
+If you have knowledge about penetration testing, red team techniques or simply want to help improve the structure and content, your participation is more than welcome!
+
 ---
 
 # Disclaimer
