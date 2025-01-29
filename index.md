@@ -25,6 +25,10 @@ Anyone can contribute by sharing methodologies, guides, fixes or new ideas to im
 If you know a technique or have information that is not here yet, or simply want to help improve the structure and content.  
 Your participation is more than welcome!  
 
+## How to collaborate on the project?
+
+Contributing is easy, follow these steps to add new content or improve existing content:
+
 ---
 
 # Disclaimer
