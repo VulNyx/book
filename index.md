@@ -34,12 +34,12 @@ Contributing is easy, follow these steps to add new content or improve existing 
 - 4- Submit a pull request for review.
 
 Directory structure by categories:
-- Operating System (Linux/Windows) → [_os](https://github.com/VulNyx/vulnyx.github.io/tree/master/_os)
-- Network (techniques that involve networks) → [_network](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general)
-- General (Topics without a specific category) → [_general](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general)
-- Services (Services, ports and protocols) → [_service](https://github.com/VulNyx/vulnyx.github.io/tree/master/_service)
-- Active Directory (Only attacks on AD) → [_ad](https://github.com/VulNyx/vulnyx.github.io/tree/master/_ad)
-- Web App (Only attacks on web applications) → [_web](https://github.com/VulNyx/vulnyx.github.io/tree/master/_web)
+- [_os](https://github.com/VulNyx/vulnyx.github.io/tree/master/_os) - Operating System (Linux/Windows)
+- [_network](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general) - Network (techniques that involve networks)
+- [_general](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general) - General (Topics without a specific category)
+- [_service](https://github.com/VulNyx/vulnyx.github.io/tree/master/_service) - Services (Services, ports and protocols)
+- [_ad](https://github.com/VulNyx/vulnyx.github.io/tree/master/_ad) - Active Directory (Only attacks on AD)
+- [_web](https://github.com/VulNyx/vulnyx.github.io/tree/master/_web) - Web App (Only attacks on web applications)
 
 ---
 
