@@ -30,15 +30,14 @@ Your participation is more than welcome!
 Contributing is easy, follow these steps to add new content or improve existing content:
 - 1- [Fork](https://github.com/VulNyx/vulnyx.github.io/forks) this repository.
 - 2- Create a new branch with your new file or improvement.
-- 3- Go to the repository and enter the correct folder that identifies the category of your new file, once inside create your `file.md` file inside the folder.
-
+- 3- Go to the repository and enter the correct folder that identifies the category of your new file, once inside create your `file.md` file inside the folder.  
 Directory structure by categories:
-Operating System (Linux/Windows) → [_os](https://github.com/VulNyx/vulnyx.github.io/tree/master/_os)
-Network (techniques that involve networks) → [_network](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general)
-General (Topics without a specific category) → [_general](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general)
-Services (Services, ports and protocols) → [_service](https://github.com/VulNyx/vulnyx.github.io/tree/master/_service)
-Active Directory (Only attacks on AD) → [_ad](https://github.com/VulNyx/vulnyx.github.io/tree/master/_ad)
-Web App (Only attacks on web applications) → [_web](https://github.com/VulNyx/vulnyx.github.io/tree/master/_web)
+- Operating System (Linux/Windows) → [_os](https://github.com/VulNyx/vulnyx.github.io/tree/master/_os)
+- Network (techniques that involve networks) → [_network](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general)
+- General (Topics without a specific category) → [_general](https://github.com/VulNyx/vulnyx.github.io/tree/master/_general)
+- Services (Services, ports and protocols) → [_service](https://github.com/VulNyx/vulnyx.github.io/tree/master/_service)
+- Active Directory (Only attacks on AD) → [_ad](https://github.com/VulNyx/vulnyx.github.io/tree/master/_ad)
+- Web App (Only attacks on web applications) → [_web](https://github.com/VulNyx/vulnyx.github.io/tree/master/_web)
 - 4- Submit a pull request for review.
 
 
