@@ -45,8 +45,8 @@ Directory structure by categories:
 {: .block-warning }
 
 
-
+<br><br>
 <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
   <img src="assets/gitbook/images/favicon.png" style="width: 30px; height: auto; margin-right: 10px;">
-  <span>© VulNyx 2023-2025</span>
+  <span><b>© VulNyx 2023-2025</b>b</span>
 </div>
