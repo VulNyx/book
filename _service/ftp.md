@@ -1,8 +1,10 @@
 ---
-title: __{{ FTP }}__
+title: FTP
 date: 0021-01-01
 layout: post
 ---
+
+**{{ page.title }}**
 
 ### Basic Infomation
 
