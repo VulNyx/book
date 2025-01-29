@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <p align="center">
-  <img src="assets/gitbook/images/banner.png" alt="Texto alternativo" width="100%">
+  <img src="assets/gitbook/images/banner.png" alt="Texto alternativo" width="50%">
 </p>
 
 Hello, Hacker! Welcome to the [Vulnyx](vulnyx.com) Blog!  
