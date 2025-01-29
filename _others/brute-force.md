@@ -1,6 +1,6 @@
 ---
 title: 🟤 Brute Force
-date: 1021-01-01
+date: 0002-01-01
 layout: post
 ---
 
