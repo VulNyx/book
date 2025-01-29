@@ -30,7 +30,7 @@ Your participation is more than welcome!
 Contributing is easy, follow these steps to add new content or improve existing content:
 - 1- [Fork](https://github.com/VulNyx/vulnyx.github.io/forks) this repository.
 - 2- Create a new branch with your new file or improvement.
-- 3- Go to the [repository](https://github.com/VulNyx/vulnyx.github.io) and enter the correct folder that identifies the category of your new file, once inside create your `file.md` file inside the folder.  
+- 3- Go to the [repository](https://github.com/VulNyx/vulnyx.github.io) and enter the folder whose name identifies the category of your new contribution, once inside the folder create your `filename.md` file.
 - 4- Submit a pull request for review.
 
 Directory structure by categories:
