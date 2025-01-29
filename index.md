@@ -10,14 +10,14 @@ permalink: /
 
 # Overview
 
-Hello, **Hackers**! Welcome to the **NYX Blog**!  
+Hello, **Hackers**! Welcome to the [**NYX Blog**](https://vulnyx.github.io/)!  
 This **Cybersecurity** blog has been created by the **[Vulnyx](https://vulnyx.com)** team.  
 Here you will find a well-organized and visually appealing collection of **Penetration Testing** and **Red Team Operations** methodologies, which you can use both in real-world environments and in our vulnerable machine challenges in the playground.  
 Our goal is to provide you with a well-structured guide, to improve your skills and face new challenges in **Offensive Security**.
 
 # Contribute
 
-**NYX Blog** is a [collaborative](https://github.com/VulNyx/vulnyx.github.io/graphs/contributors) project and your input is essential.  
+[**NYX Blog**](https://vulnyx.github.io/) is a [collaborative](https://github.com/VulNyx/vulnyx.github.io/graphs/contributors) project and your input is essential.  
 Anyone can contribute by sharing methodologies, guides, fixes or new ideas to improve this resource.  
 If you know a technique or have information that is not here yet, or simply want to help improve the structure and content.  
 Your participation is more than welcome!  
