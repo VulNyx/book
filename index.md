@@ -36,7 +36,7 @@ Directory structure by categories:
 - [_service](https://github.com/VulNyx/vulnyx.github.io/tree/master/_service) - Services (Services, ports and protocols)
 - [_ad](https://github.com/VulNyx/vulnyx.github.io/tree/master/_ad) - Active Directory (Only attacks on AD)
 - [_web](https://github.com/VulNyx/vulnyx.github.io/tree/master/_web) - Web Application (Only attacks on web applications)
-- [others](https://github.com/VulNyx/vulnyx.github.io/tree/master/others) - Others (Topics without a specific category)
+- [_others](https://github.com/VulNyx/vulnyx.github.io/tree/master/others) - Others (Topics without a specific category)
 
 # Disclaimer
 
