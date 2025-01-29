@@ -12,7 +12,7 @@ permalink: /
 
 Hello, **Hacker**! Welcome to the **NYX Blog**!  
 This **Cybersecurity** blog has been created by the **[Vulnyx](https://vulnyx.com)** team.  
-Here you will find a well-organized and visually appealing collection of methodologies for **Penetration Testing** and **Red Team Operations**.  
+Here you will find a well-organized and visually appealing collection of **Penetration Testing** and **Red Team Operations** methodologies that you can use in real-world or controlled environments.  
 Our goal is to provide you with a well-structured guide, to improve your skills and face new challenges in **Offensive Security**.  
 
 
