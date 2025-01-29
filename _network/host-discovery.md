@@ -1,5 +1,5 @@
 ---
-title: 🟡 ARP / Host Discovery
+title: 🟡 Host Discovery
 date: 1001-01-01
 layout: post
 ---
