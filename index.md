@@ -4,8 +4,6 @@ title:
 permalink: /
 ---
 
-# NYX Blog
-
 ## Welcome
 
 Hello, Hacker! Welcome to the [Vulnyx](vulnyx.com) Blog!
