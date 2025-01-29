@@ -22,7 +22,8 @@ Our goal is to provide you with a well-structured guide, to improve your skills 
 
 **NYX Blog** is a [collaborative](https://github.com/VulNyx/vulnyx.github.io/graphs/contributors) project and your input is essential.  
 Anyone can contribute by sharing methodologies, guides, fixes or new ideas to improve this resource.  
-If you know a technique or have information that is not here yet, or simply want to help improve the structure and content, your participation is more than welcome!  
+If you know a technique or have information that is not here yet, or simply want to help improve the structure and content.  
+Your participation is more than welcome!  
 
 ---
 
