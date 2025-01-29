@@ -241,6 +241,8 @@ systemctl status vsftpd
 
 > ##### WARNING
 > All tools in this repository are intended for educational, ethical purposes only. The VulNyx team is not responsible for any misuse or damage caused by the improper use of these tools to third-party systems or infrastructures.
+> All techniques presented in this blog are for educational and ethical purposes.
+> The [VulNyx](https://vulnyx.com) team is not responsible for any misuse or damage caused to third party systems or infrastructure.
 {: .block-warning }
 
 <br><br>
