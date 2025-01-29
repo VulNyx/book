@@ -56,9 +56,6 @@ collections:
   network:
     output: true
     permalink: /:collection/:path/
-  general:
-    output: true
-    permalink: /:collection/:path/
   service:
     output: true
     permalink: /:collection/:path/
@@ -66,6 +63,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   web:
+    output: true
+    permalink: /:collection/:path/
+  others:
     output: true
     permalink: /:collection/:path/
   #pages:
@@ -79,10 +79,10 @@ collections:
 ordered_collections:
   - os
   - network
-  - general
   - service
   - ad
   - web
+  - others
   #- posts
   #- pages
   #- others
