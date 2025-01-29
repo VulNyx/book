@@ -13,7 +13,8 @@ PORT   STATE SERVICE
 21/tcp open  ftp
 ```
 
-When [Nmap](https://nmap.org) cannot obtain the service header directly, it uses the [IANA](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) database to identify the service that might be running on a specific port.
+When [Nmap](https://nmap.org) cannot obtain the service header directly, it uses the [IANA](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) database to identify the service that might be running on a specific port.  
+When [Nmap](https://nmap.org) does not get the service header, it uses the [IANA](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) database to determine the name of the service associated with that port.
 
 ---
 
