@@ -166,6 +166,7 @@
 }
 */
 
+/*
 .book.font-family-0 {
     font-family: sans, sans-serif;
 }
@@ -173,7 +174,11 @@
 .book.font-family-1 {
     font-family: sans, sans-serif;
 }
+*/
 
+body {
+    font-family: sans, sans-serif;
+}
 
 /* Render wide tables */
 
