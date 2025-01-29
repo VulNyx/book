@@ -1,6 +1,6 @@
 ---
 title: 🪟 Windows
-date: 2025-01-01
+date: 0003-01-01
 layout: post
 ---
 
