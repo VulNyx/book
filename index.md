@@ -8,16 +8,12 @@ permalink: /
   <img src="assets/gitbook/images/ban.png" width="100%">
 </p>
 
-<br>
-
 # Overview
 
 Hello, **Hackers**! Welcome to the **NYX Blog**!  
 This **Cybersecurity** blog has been created by the **[Vulnyx](https://vulnyx.com)** team.  
 Here you will find a well-organized and visually appealing collection of **Penetration Testing** and **Red Team Operations** methodologies, which you can use both in real-world environments and in our vulnerable machine challenges in the playground.  
-Our goal is to provide you with a well-structured guide, to improve your skills and face new challenges in **Offensive Security**.  
-
----
+Our goal is to provide you with a well-structured guide, to improve your skills and face new challenges in **Offensive Security**.
 
 # Contribute
 
@@ -41,8 +37,6 @@ Directory structure by categories:
 - [_service](https://github.com/VulNyx/vulnyx.github.io/tree/master/_service) - Services (Services, ports and protocols)
 - [_ad](https://github.com/VulNyx/vulnyx.github.io/tree/master/_ad) - Active Directory (Only attacks on AD)
 - [_web](https://github.com/VulNyx/vulnyx.github.io/tree/master/_web) - Web App (Only attacks on web applications)
-
----
 
 # Disclaimer
 
