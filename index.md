@@ -10,11 +10,10 @@ permalink: /
 
 <br>
 
-Hello, **Hacker**! Welcome to the **[Vulnyx](https://vulnyx.com) Blog**!  
-This blog was created by the [Vulnyx](vulnyx.com) team to serve as a centralized space for maintaining a well-organized and visually appealing collection of hacking methodologies and cheat sheets.
-This cybersecurity blog has been created by the **[VulNyx](https://vulnyx.com) team.  
-Here you will find a well-organized and visually appealing collection of methodologies for penetration testing and red team operations.
-Our goal is to provide you with a well-structured guide, to improve your skills and face new challenges in offensive security.
+Hello, **Hacker**! Welcome to the ** NYX Blog**!  
+This **Cybersecurity** blog has been created by the **[Vulnyx](https://vulnyx.com)** team.  
+Here you will find a well-organized and visually appealing collection of methodologies for penetration testing and **red team operations**.  
+Our goal is to provide you with a well-structured guide, to improve your skills and face new challenges in **offensive security**.  
 
 
 ---
