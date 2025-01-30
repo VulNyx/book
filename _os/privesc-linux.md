@@ -1,5 +1,5 @@
 ---
-title: '<pre>'  🐧 Privilege Escalation (Linux)'</pre>'
+title: "&nbsp;&nbsp;🐧 Privilege Escalation (Linux)"
 date: 0003-01-01
 layout: post
 ---
