@@ -11,7 +11,7 @@ permalink: /
 # Overview
 
 Hello, **Hackers**! Welcome to the [**NYX Blog**](https://vulnyx.github.io/)!  
-This **Cybersecurity** blog has been created by the **[Vulnyx](https://vulnyx.com)** team.  
+This **Cybersecurity** blog has been created by the **[VulNyx](https://vulnyx.com)** team.  
 Here you will find a well-organized and visually appealing collection of **Penetration Testing** and **Red Team Operations** methodologies, which you can use both in real-world environments and in our vulnerable machine challenges in the playground.  
 Our goal is to provide you with a well-structured guide, to improve your skills and face new challenges in **Offensive Security**.
 
