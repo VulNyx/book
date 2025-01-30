@@ -1,5 +1,5 @@
 ---
-title: 🐧 Privilege Escalation (Linux)
+title: &nbsp;&nbsp;&nbsp;&nbsp; 🐧 Privilege Escalation (Linux)
 date: 0003-01-01
 layout: post
 ---
