@@ -1,5 +1,5 @@
 ---
-title: Privilege Escalation (Windows)
+title: 🪟 Privilege Escalation (Windows)
 date: 0005-01-01
 layout: post
 ---
