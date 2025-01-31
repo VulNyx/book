@@ -42,7 +42,7 @@ for i in $(seq 1 254); do (ping -c 1 192.168.1.${i} | grep "bytes from" | awk '{
 
 ##### Bash
 
-**Network segments: `1`**
+Network segments: `1`
 
 ```ruby
 #!/bin/bash
@@ -54,7 +54,7 @@ for i in $(seq 1 254); do
 done; wait
 ```
 
-**Network segments: `2`**
+Network segments: `2`
 
 ```ruby
 #!/bin/bash
