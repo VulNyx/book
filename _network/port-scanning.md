@@ -4,9 +4,9 @@ date: 1002-01-01
 layout: post
 ---
 
-### Open Ports
+# Open Ports
 
-##### TCP
+### TCP
 
 **Nmap**
 
@@ -74,7 +74,7 @@ set THREADS 10
 run
 ```
 
-##### UDP
+### UDP
 
 ```ruby
 nmap -sUVC -p1-100 192.168.1.2
@@ -88,7 +88,7 @@ nmap -sU --top-ports="50" 192.168.1.2
 nmap -sU --top-ports="100" 192.168.1.2
 ```
 
-##### SCTP
+### SCTP
 
 ```ruby
 nmap -n -Pn -sY -p- --min-rate="5000" 192.168.1.2
@@ -97,6 +97,33 @@ The `SCTP` port must be converted to `TCP`, this is necessary to be able to acce
 
 ```ruby
 socat TCP-LISTEN:8081,fork SCTP:192.168.1.2:8080
+```
+
+---
+
+# Services & Versions
+
+### TCP
+
+```ruby
+nmap -n -Pn -sVC -p<PORTS> 192.168.1.2                      # ipv4
+nmap -n -Pn -sVC -p<PORTS> -6 fe80::a00:27ff:fe7b:77f7      # ipv6
+proxychains nmap -p<PORTS> -sTVC 127.0.0.1 2>/dev/null      # tunnel / proxy (proxychains)
+
+nc -vn <IP> <PORT>                                          #banner grabbing
+timeout 0.1 bash -c "nc -nv 192.168.1.2 <PORT>"             #banner grabbing
+```
+
+### UDP
+
+```ruby
+nmap -sU -sVC -p161,500 192.168.1.2
+```
+
+### SCTP
+
+```ruby
+nmap -p22,80,8080 -sYVC 192.168.1.2
 ```
 
 ---
