@@ -9,7 +9,7 @@ layout: post
 ##### Nmap
 
 ```ruby
-# apt instal -y nmap
+# apt install -y nmap
 nmap -sn 192.168.1.0/24
 ```
 
