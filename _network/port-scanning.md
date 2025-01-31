@@ -4,13 +4,7 @@ date: 1002-01-01
 layout: post
 ---
 
-### Basic Information
-
-To perform a scan across the entire port range (65535) and make it as quiet as possible without false negatives, it is recommended to split the scan into 2 stages.
-
----
-
-### Stage: `1` (Open Ports)
+### Open Ports
 
 ##### TCP
 
@@ -78,6 +72,32 @@ set PORTS 1-65535
 set RHOSTS 192.168.1.2
 set THREADS 10
 run
+```
+
+##### UDP
+
+```ruby
+nmap -sUVC -p1-100 192.168.1.2
+nmap -sUVC -p101-200 192.168.1.2
+nmap -sUVC -p69,161 192.168.1.2
+nmap -sU --top-ports="10" 192.168.1.2
+nmap -sU --top-ports="20" 192.168.1.2
+nmap -sU --top-ports="30" 192.168.1.2
+nmap -sU --top-ports="40" 192.168.1.2
+nmap -sU --top-ports="50" 192.168.1.2
+nmap -sU --top-ports="100" 192.168.1.2
+```
+
+##### SCTP
+
+```ruby
+nmap -n -Pn -sY -p- --min-rate="5000" 192.168.1.2
+```
+
+It is necessary to convert the `SCTP` port to `TCP` in order to reach the service normally since many are not compatible with this protocol.
+
+```ruby
+socat TCP-LISTEN:8081,fork SCTP:192.168.1.2:8080
 ```
 
 ---
