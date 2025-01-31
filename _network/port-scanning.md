@@ -93,8 +93,7 @@ nmap -sU --top-ports="100" 192.168.1.2
 ```ruby
 nmap -n -Pn -sY -p- --min-rate="5000" 192.168.1.2
 ```
-
-It is necessary to convert the `SCTP` port to `TCP` in order to reach the service normally since many are not compatible with this protocol.
+The `SCTP` port must be converted to `TCP`, this is necessary to be able to access the service normally since many services are not compatible with this protocol.
 
 ```ruby
 socat TCP-LISTEN:8081,fork SCTP:192.168.1.2:8080
