@@ -27,22 +27,22 @@ nmap -sn 192.168.1.0/24
 netdiscover -i eth0 -r 192.168.1.0/24
 ```
 
-### arp-scan
+##### arp-scan
 
 ```ruby
 # apt install -y arp-scan
 arp-scan -I eth0 -l
 ```
 
-### Ping
+##### Ping
 
 ```ruby
 for i in $(seq 1 254); do (ping -c 1 192.168.1.${i} | grep "bytes from" | awk '{print $4}' | tr -d ':' &); done;
 ```
 
-### Bash
+##### Bash
 
-##### Network segments: `1`
+**Network segments: `1`**
 
 ```ruby
 #!/bin/bash
@@ -54,7 +54,7 @@ for i in $(seq 1 254); do
 done; wait
 ```
 
-##### Network segments: `2`
+**Network segments: `2`**
 
 ```ruby
 #!/bin/bash
