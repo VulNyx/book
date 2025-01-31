@@ -128,6 +128,38 @@ nmap -p22,80,8080 -sYVC 192.168.1.2
 
 ---
 
+### Output (Nmap)
+
+- `-oN` - **Normal**
+- `-oG` - **Grepable**
+- `-oX` - **XML**
+
+The -oX (XML) format can be converted to HTML with xsltproc, we raise an HTTP server to display the new HTML file in an attractive way.
+
+```ruby
+# apt install -y xsltproc
+xsltproc nmap.xml >/var/www/html/index.html ; service apache2 start
+```
+
+---
+
+Function (copy-ports)
+
+Function to add in `.bashrc` or `.zshrc` to copy open ports from a file.
+
+```ruby
+copy-ports () {
+  if [ -n "$1" ]
+  then
+    grep -oP '\d{1,5}/tcp' $1 | cut -d '/' -f 1 | xargs | tr ' ' ',' | tr -d '\n' | xclip -sel clip
+  else
+    echo "[i] Usage: copy-ports <nmap file>"
+  fi
+}
+```
+
+---
+
 #### Disclaimer
 
 > ##### WARNING
