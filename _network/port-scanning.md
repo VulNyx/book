@@ -8,9 +8,11 @@ layout: post
 
 To perform a scan across the entire port range (65535) and make it as quiet as possible without false negatives, it is recommended to split the scan into 2 stages.
 
-### TCP
+---
 
-##### Ports (Open)
+### Stage: `1` (Open Ports)
+
+##### TCP
 
 **Nmap**
 
@@ -65,6 +67,17 @@ for host in ${hosts[@]}; do
     timeout 1 bash -c "echo '' > /dev/tcp/$host/$port" 2>/dev/null && echo "[*] Ports: $port - Active" &
   done; wait
 done
+```
+
+**Metasploit**
+
+```ruby
+use auxiliary/scanner/portscan/tcp
+show options
+set PORTS 1-65535
+set RHOSTS 192.168.1.2
+set THREADS 10
+run
 ```
 
 ---
