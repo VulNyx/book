@@ -39,7 +39,7 @@ root:$1$TSMXnd0L$DwQWYa.zuPqtZUjyRLWxy0:0:0:root:/root:/bin/bash
 
 ```ruby
 low@vulnyx:~$ su -
-Contraseña:
+Password:
 
 root@vulnyx:~# id
 uid=0(root) gid=0(root) grupos=0(root)
