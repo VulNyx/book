@@ -143,9 +143,9 @@ xsltproc nmap.xml >/var/www/html/index.html ; service apache2 start
 
 ---
 
-Function (copy-ports)
+### Function (copy-ports)
 
-Function to add in `.bashrc` or `.zshrc` to copy open ports from a file.
+Function to add to `.bashrc` or `.zshrc` to **copy open ports** from an **nmap file**.
 
 ```ruby
 copy-ports () {
