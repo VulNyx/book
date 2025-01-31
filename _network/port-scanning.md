@@ -110,8 +110,8 @@ nmap -n -Pn -sVC -p<PORTS> 192.168.1.2                      # ipv4
 nmap -n -Pn -sVC -p<PORTS> -6 fe80::a00:27ff:fe7b:77f7      # ipv6
 proxychains nmap -p<PORTS> -sTVC 127.0.0.1 2>/dev/null      # tunnel / proxy (proxychains)
 
-nc -vn <IP> <PORT>                                          #banner grabbing
-timeout 0.1 bash -c "nc -nv 192.168.1.2 <PORT>"             #banner grabbing
+nc -vn <IP> <PORT>                                          # banner grabbing
+timeout 0.1 bash -c "nc -nv 192.168.1.2 <PORT>"             # banner grabbing
 ```
 
 #### UDP
@@ -134,7 +134,7 @@ nmap -p22,80,8080 -sYVC 192.168.1.2
 - `-oG` - **Grepable**
 - `-oX` - **XML**
 
-The -oX (XML) format can be converted to HTML with xsltproc, we raise an HTTP server to display the new HTML file in an attractive way.
+The `-oX (XML)` format can be converted to **HTML** with `xsltproc`, we raise an **HTTP** server to display the new **HTML** file in an attractive way.
 
 ```ruby
 # apt install -y xsltproc
