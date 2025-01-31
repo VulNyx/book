@@ -140,4 +140,3 @@ nmap -p22,80,8080 -sYVC 192.168.1.2
   <img src="/assets/gitbook/images/favicon.png" style="width: 30px; height: auto; margin-right: 6px;">
   <span>© VulNyx 2023-2025</span>
 </div>
-
