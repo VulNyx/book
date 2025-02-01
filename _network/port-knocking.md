@@ -15,10 +15,6 @@ sequenceDiagram
     
     kali->>www-data: LFI (Local File Inclusion)
     
-    loop Escalación de privilegios
-        www-data->>www-data: Enumeración con find (sudo)
-    end
-    
     Note right of www-data: Buscando archivos sensibles...
     
     www-data-->>root: Escalada exitosa
