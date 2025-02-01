@@ -142,6 +142,8 @@ The relevant output formats and parameters are:
 
 </div>
 
+<br>
+
 The `-oX (XML)` format can be converted to **HTML** with `xsltproc`, we raise an **HTTP** server to display the new **HTML** file in an attractive way.
 
 ```ruby
