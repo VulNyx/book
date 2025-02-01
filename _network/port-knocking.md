@@ -18,4 +18,5 @@ graph LR;
 ```mermaid
 graph LR;
     attacker-- Protocol ---ipv4;
+    ipv4-- SYN ---openports;
 ```
