@@ -8,11 +8,6 @@ mermaid: true
 Port Knocking
 
 ```mermaid
-sequenceDiagram
-    participant kali
-    participant www-data
-    participant root
-    
-    kali->>www-data: LFI (Local File Inclusion)
-    www-data->>root: Find (Sudo)
+graph LR;
+    attacker-- This is the text ---www-data
 ```
