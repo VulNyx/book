@@ -17,6 +17,7 @@ graph LR;
 
 ```mermaid
 graph LR;
-    attacker-- Protocol ---ipv4;
-    ipv4-- SYN ---["Open Ports"];
+    Attacker-- Protocol ---IPv4;
+    IPv4-- SYN ---Open_Ports;
+    Open_Ports-- Banner_Grabbing ---Victim;
 ```
