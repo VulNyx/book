@@ -9,5 +9,6 @@ Port Knocking
 
 ```mermaid
 graph LR;
-    attacker-- This is the text ---www-data
+    hacker-- Command Injection ---www-data;
+    www-data-- Find (Sudo) ---root;
 ```
