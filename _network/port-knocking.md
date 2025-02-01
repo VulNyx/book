@@ -14,8 +14,5 @@ sequenceDiagram
     participant root
     
     kali->>www-data: LFI (Local File Inclusion)
-    
-    Note right of www-data: Buscando archivos sensibles...
-    
-    www-data-->>root: Escalada exitosa
+    www-data->>root: Find (Sudo)
 ```
