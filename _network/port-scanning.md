@@ -130,6 +130,8 @@ nmap -p22,80,8080 -sYVC 192.168.1.2
 
 ### Output (Nmap)
 
+The relevant output formats and parameters are:  
+
 - `-oN` - **Normal**
 - `-oG` - **Grepable**
 - `-oX` - **XML**
