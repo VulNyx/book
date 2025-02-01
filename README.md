@@ -1,3 +1,1 @@
-### NYX Blog
-
-**The hacker blog full of tricks for the playground.**
+### NYX Blog - The hacker blog full of tricks for the playground.
