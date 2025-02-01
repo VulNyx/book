@@ -9,26 +9,17 @@ Port Knocking
 
 ```mermaid
 sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice->>John: Hello John, how are you?
-    loop Healthcheck
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts <br/>prevail!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-```
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-
-
+    participant kali
+    participant www-data
+    participant root
     
+    kali->>www-data: LFI (Local File Inclusion)
+    
+    loop Escalación de privilegios
+        www-data->>www-data: Enumeración con find (sudo)
+    end
+    
+    Note right of www-data: Buscando archivos sensibles...
+    
+    www-data-->>root: Escalada exitosa
+```
