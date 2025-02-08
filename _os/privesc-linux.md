@@ -4,6 +4,22 @@ date: 0003-01-01
 layout: post
 ---
 
+### Groups
+
+##### disk
+
+##### adm
+
+##### docker
+
+##### lxd
+
+##### fail2ban
+
+##### video
+
+---
+
 ### /etc/passwd (Writable)
 
 If a low-privileged user has permissions to write to the `/etc/passwd` file, an attacker can remove the `:x:` (on the `root` user line) and add a **hash**.  
