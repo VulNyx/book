@@ -182,6 +182,8 @@ low@vulnyx:~$ /bin/bash -pi
 
 ### Path Hijacking (Path Variable)
 
+**Binary**
+
 **Cron**
 
 ---
