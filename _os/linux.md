@@ -91,6 +91,22 @@ fuser -k 3306/tcp
 /etc/passwd
 /etc/shadow
 /etc/hosts
+/etc/hotname
+/etc/issue
+/etc/motd
+/etc/sudoers
+/etc/crontab
+
+/home/user/.ssh/id_rsa
+/root/.ssh/id_rsa
+
+/etc/ssh/sshd_config
+/var/log/auth.log
+
+/var/log/apache2/access.log
+/var/log/apache2/error.log
+/etc/apache2/sites-available/000-default.conf
+/etc/apache2/apache2.conf
 ```
 
 ---
