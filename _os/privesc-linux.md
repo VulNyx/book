@@ -29,17 +29,19 @@ find / -writable 2>/dev/null | grep -viE "proc|sys|dev"
 find / -writable -user low 2>/dev/null
 ```
 
-If I identify a **binary** with `suid` or `sudo` **permissions** [GTFOBins](https://gtfobins.github.io) is the way.
-
-- https://gtfobins.github.io
+If I identify a **binary** with `suid` or `sudo` **permissions** [**GTFOBins**](https://gtfobins.github.io) is the way.
 
 ---
 
 ### Cron (Task)
 
+View `cron` jobs defined in **global file**, 
+
 ```ruby
 cat /etc/crontab
 ```
+
+If tasks have been defined in the individual file that each user has with `crontab -e`, it is necessary to monitor with specific tools.
 
 ---
 
