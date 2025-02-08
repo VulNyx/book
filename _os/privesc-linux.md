@@ -16,7 +16,9 @@ find / -name sudo 2>/dev/null
 find / -perm -4000 2>/dev/null
 find / -perm -4000 -ls 2>/dev/null
 find / -perm -4000 -exec ls -l {} \; 2>/dev/null
-# capabilities^
+
+# capabilities
+/usr/sbin/getcap -r / 2>/dev/null
 
 # users
 grep "sh$" /etc/passwd
