@@ -8,7 +8,7 @@ layout: post
 
 #### disk
 
-When a user is part of a `disk` **group**, he or she is granted direct access to the system disks and partitions.
+When a user is part of a `disk` **group**, he or she is granted direct access to the system **disks** and **partitions**.
 
 **Check Group**
 
