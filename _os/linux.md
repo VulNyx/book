@@ -134,10 +134,10 @@ x86_64-w64-mingw32-gcc main.c -o evil.exe      # x64 - 64 bits
 **Linux**
 
 ```ruby
-gcc -m32 main.c -o shell      # x86 - 32 bits
-gcc main.c -o shell           # x64 - 64 bits
+gcc -m32 main.c -o output      # x86 - 32 bits
+gcc main.c -o output           # x64 - 64 bits
 
-gcc main.c -o shell -static   # fix errors
+gcc main.c -o output -static   # fix errors
 ```
 
 **Go**
@@ -146,7 +146,7 @@ gcc main.c -o shell -static   # fix errors
 go build .                     # default (no compress)
 
 go build  -ldflags '-s -w' .   # compress
-upx archivo
+upx filename
 ```
 
 ---
