@@ -44,7 +44,6 @@ ps aux
 ps -faux
 ps -eo command
 ps -eo command "root"
-
 ```
 
 ---
@@ -114,9 +113,9 @@ fuser -k 3306/tcp
 ### Restricted Bash (rbash) [Escape]
 
 ```ruby
-ssh user@192.168.1.2 -t 'bash --noprofile'
-ssh user@192.168.1.2 bash
-ssh -i id_rsa user@192.168.1.2 -t 'bash --noprofile'
+ssh low@192.168.1.2 -t 'bash --noprofile'
+ssh low@192.168.1.2 bash
+ssh -i id_rsa low@192.168.1.2 -t 'bash --noprofile'
 ```
 
 ---
@@ -127,17 +126,17 @@ ssh -i id_rsa user@192.168.1.2 -t 'bash --noprofile'
 
 ```ruby
 # apt-get install mingw-w64
-i686-w64-mingw32-gcc main.c -o evil.exe        # x86 - 32 bits
-x86_64-w64-mingw32-gcc main.c -o evil.exe      # x64 - 64 bits
+i686-w64-mingw32-gcc main.c -o binary.exe        # x86 - 32 bits
+x86_64-w64-mingw32-gcc main.c -o binary.exe      # x64 - 64 bits
 ```
 
 **Linux**
 
 ```ruby
-gcc -m32 main.c -o output      # x86 - 32 bits
-gcc main.c -o output           # x64 - 64 bits
+gcc -m32 main.c -o binary      # x86 - 32 bits
+gcc main.c -o binary           # x64 - 64 bits
 
-gcc main.c -o output -static   # fix errors
+gcc main.c -o binary -static   # fix errors
 ```
 
 **Go**
@@ -146,7 +145,7 @@ gcc main.c -o output -static   # fix errors
 go build .                     # default (no compress)
 
 go build  -ldflags '-s -w' .   # compress
-upx filename
+upx binary
 ```
 
 ---
