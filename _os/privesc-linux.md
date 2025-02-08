@@ -6,7 +6,29 @@ layout: post
 
 ### Groups
 
+#### sudo
+
+When a user is part of the `sudo` **group**, he can run any command as the `root` user.
+
+**Check Group**
+
+```ruby
+low@vulnyx:~$ id
+uid=1000(low) gid=1000(low) groups=1000(low),27(sudo)
+```
+
+**Abuse Group**
+
+```ruby
+low@vulnyx:~$ sudo su
+root@vulnyx:~# id
+uid=0(root) gid=0(root) groups=0(root)
+```
+
 #### disk
+
+When a user is part of the `adm` **group**, he can **read log files** on the system.
+
 
 When a user is part of a `disk` **group**, he or she is granted direct access to the system **disks** and **partitions**.
 
