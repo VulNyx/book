@@ -87,8 +87,7 @@ low@vulnyx:~$ /bin/bash -pi
 
 ### /etc/passwd (Writable)
 
-If a low-privileged user has permissions to write to the `/etc/passwd` file, an attacker can remove the `:x:` (on the `root` user line) and add a **hash**.  
-This will change the file where a user's authentication is performed, from being done through the `/etc/shadow` file to being done through the `/etc/passwd` file.
+If a low-privileged user has **write permissions** to the `/etc/passwd` file, an attacker can remove the `x` (on the **root** user line) and add a **hash**, this will cause the file that validates credentials to change from `/etc/shadow` to `/etc/passwd`.
 
 ```ruby
 # Check Permissions
