@@ -43,6 +43,40 @@ cat /etc/crontab
 
 If tasks have been defined in the individual file that each user has with `crontab -e`, it is necessary to monitor with specific tools.
 
+**pspy**
+
+Use [**pspy**](https://github.com/DominicBreuker/pspy) tool to **monitor tasks**.
+
+```ruby
+low@vulnyx:~$ cd /dev/shm
+low@vulnyx:/dev/shm$ wget -q --no-check-certificate "https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64"
+low@vulnyx:/dev/shm$ chmod +x pspy64
+low@vulnyx:/dev/shm$ ./pspy64
+```
+
+**Bash**
+
+You can also use `bash` and do it manually.
+
+```ruby
+#!/bin/bash
+
+old=$(ps -eo command)
+filter="kworker|command|defunct"
+
+function ctrl_c(){
+  exit 1
+}
+
+trap ctrl_c int
+
+while true; do
+  new=$(ps -eo command)
+  diff <(echo "$old") <(echo "$new") | grep "[\>\<]" | grep -vE "$filter"
+  old=$new
+done
+```
+
 ---
 
 ### Groups
@@ -147,6 +181,8 @@ low@vulnyx:~$ /bin/bash -pi
 ---
 
 ### Path Hijacking (Path Variable)
+
+**Cron**
 
 ---
 
