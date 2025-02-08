@@ -35,7 +35,7 @@ If I identify a **binary** with `suid` or `sudo` **permissions** [**GTFOBins**](
 
 ### Cron (Task)
 
-View `cron` jobs defined in **global file**, 
+View `cron` jobs defined in **global file**:
 
 ```ruby
 cat /etc/crontab
@@ -123,6 +123,38 @@ low@vulnyx:~$ /bin/bash -pi
 #### fail2ban
 
 #### video
+
+---
+
+### Doas
+
+---
+
+### pkexec <=0.105-31 (CVE-2021-4034)
+
+---
+
+### sudo <=1.8.27 (CVE-2019-14287)
+
+---
+
+### chkrootkit
+
+---
+
+### DirtyCOW
+
+---
+
+### Path Hijacking (Path Variable)
+
+---
+
+### Python Library Hijacking
+
+---
+
+### Wilcard
 
 ---
 
