@@ -4,6 +4,43 @@ date: 0003-01-01
 layout: post
 ---
 
+### Enumeration
+
+```ruby
+# sudo
+sudo -l
+# If when performing the previous step it tells you that sudo is not found
+find / -name sudo 2>/dev/null
+
+# suid
+find / -perm -4000 2>/dev/null
+find / -perm -4000 -ls 2>/dev/null
+find / -perm -4000 -exec ls -l {} \; 2>/dev/null
+# capabilities^
+
+# users
+grep "sh$" /etc/passwd
+
+# writable
+find / -writable 2>/dev/null
+find / -writable 2>/dev/null | grep -viE "proc|sys|dev"
+find / -writable -user low 2>/dev/null
+```
+
+If I identify a **binary** with `suid` or `sudo` **permissions** [GTFOBins](https://gtfobins.github.io) is the way.
+
+- https://gtfobins.github.io
+
+---
+
+### Cron (Task)
+
+```ruby
+cat /etc/crontab
+```
+
+---
+
 ### Groups
 
 #### sudo
