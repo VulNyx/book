@@ -90,11 +90,12 @@ fuser -k 3306/tcp
 /etc/passwd
 /etc/shadow
 /etc/hosts
-/etc/hotname
+/etc/hostname
 /etc/issue
 /etc/motd
 /etc/sudoers
 /etc/crontab
+/etc/group
 
 /home/user/.ssh/id_rsa
 /root/.ssh/id_rsa
