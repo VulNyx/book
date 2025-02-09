@@ -38,6 +38,11 @@ Directory structure by categories:
 - [_web](https://github.com/VulNyx/vulnyx.github.io/tree/master/_web) - **Web Application** (Only attacks on web applications).
 - [_others](https://github.com/VulNyx/vulnyx.github.io/tree/master/_others) - **Others** (Topics without a specific category).
 
+
+### Donate
+
+[![Buy Me a Coffee](https://ko-fi.com/img/githubbutton_sm.svg)]((https://ko-fi.com/vulnyx)
+
 ### Disclaimer
 
 > ##### WARNING
