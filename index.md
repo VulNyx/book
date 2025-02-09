@@ -41,7 +41,7 @@ Directory structure by categories:
 
 ### Donate
 
-[![Buy Me a Coffee](https://ko-fi.com/img/githubbutton_sm.svg)]((https://ko-fi.com/vulnyx)
+[![Buy Me a Coffee](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/vulnyx)
 
 ### Disclaimer
 
