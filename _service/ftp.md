@@ -238,7 +238,7 @@ systemctl status vsftpd
 
 ---
 
-#### Disclaimer
+##### Disclaimer
 
 > ##### WARNING
 > All techniques present in this blog are for educational, ethical or CTFs play solving purposes.  
