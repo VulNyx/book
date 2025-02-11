@@ -21,7 +21,7 @@ When [Nmap](https://nmap.org) does not get the service header, it uses the [IANA
 
 #### Active
 
-```ruby
+```bash
 nc -vn 192.168.1.2 21
 timeout 0.1 bash -c "nc -nv 192.168.1.2 21"
 nmap -p21 -sS 192.168.1.2
