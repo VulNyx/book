@@ -3171,7 +3171,8 @@ table {
   display: block;
   word-wrap: break-word;
   overflow: hidden;
-  color: #333;
+  /*color: #333;*/
+  color: #ffffff;
   line-height: 1.7;
   text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
