@@ -2642,6 +2642,7 @@ table {
   width: 300px;
   color: #364149;
   background: #fafafa;
+  background-color: #262626;
   border-right: 1px solid rgba(0, 0, 0, 0.07);
   -webkit-transition: left 250ms ease;
   -moz-transition: left 250ms ease;
