@@ -8,7 +8,7 @@ layout: post
 
 [**File Transfer Protocol (FTP)**](https://en.wikipedia.org/wiki/File_Transfer_Protocol) is a standard network protocol used to transfer files from one host to another over a TCP-based network, such as the internet.  
 
-Default Port: `21`  
+Default Port: **`21`**  
 ```bash
 PORT   STATE SERVICE
 21/tcp open  ftp
