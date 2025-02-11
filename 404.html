@@ -1,24 +1,60 @@
----
-layout: home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="data:,">
+    <title>Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #2f323a;
+        }
 
-<div class="container">
-  <h1>404</h1>
+        .container {
+            text-align: center;
+        }
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .error-code {
+            color: #3fa8f4;
+        }
+
+        .separator {
+            color: #ed1c24;
+        }
+
+        .not-found {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/assets/gitbook/images/logoSM.png" alt="Logo" class="logo">
+        <h1>
+            <span class="error-code">404</span>
+            <span class="separator">|</span>
+            <span class="not-found">Not Found</span>
+        </h1>
+    </div>
+</body>
+</html>
