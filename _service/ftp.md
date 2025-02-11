@@ -73,7 +73,7 @@ ftp> more .htaccess
 
 #### Connect
 
-```ruby
+```bash
 # default port (21)
 ftp peter@192.168.1.2
 ftp anonymous@192.168.1.2
