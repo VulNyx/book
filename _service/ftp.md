@@ -161,9 +161,9 @@ hydra -t 64 -L users.dic -p Passw0rd ftp://192.168.1.2:1234 -f -I
 
 #### Interesting Files
 
-- `/srv/ftp` - Default **path**.
-- `/var/log/vsftpd.log` - This file is for **logs**.
-- `/etc/vsftpd.conf` - This file is for **configuration**.
+- **`/srv/ftp`** - Default **directory** path.
+- **`/var/log/vsftpd.log`** - Default **log** file path.
+- **`/etc/vsftpd.conf`** - Default path of the **configuration** file.
 
 #### Install
 
@@ -171,6 +171,7 @@ hydra -t 64 -L users.dic -p Passw0rd ftp://192.168.1.2:1234 -f -I
 # client
 apt install -y ftp
 apt install -y lftp
+
 # server
 apt install -y vsftpd
 ```
@@ -180,6 +181,7 @@ apt install -y vsftpd
 ```bash
 # default port
 listen_port=21
+
 # other port
 listen_port=1234
 ```
@@ -189,6 +191,7 @@ listen_port=1234
 ```bash
 # enable
 anonymous_enable=YES
+
 # disable
 anonymous_enable=NO
 ```
@@ -199,6 +202,7 @@ anonymous_enable=NO
 # show version
 #ftpd_banner=Welcome to blah FTP service.
 21/tcp open  ftp     vsftpd 3.0.3
+
 # hidden version
 ftpd_banner=Welcome to blah FTP service.
 21/tcp open  ftp     vsftpd
@@ -211,6 +215,7 @@ ftpd_banner=Welcome to blah FTP service.
 listen_address=0.0.0.0
 listen_port=21
 listen=YES
+
 # internal (localhost)
 listen_address=127.0.0.1
 listen_port=21
