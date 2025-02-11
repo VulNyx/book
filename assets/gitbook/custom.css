@@ -50,7 +50,8 @@
 }
 
 .book .book-body .book-header {
-    background: #ffffff;
+    /*background: #ffffff;*/
+    background: #262626;
 }
 
 .book.color-theme-1 .book-body .book-header {
