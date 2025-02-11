@@ -45,8 +45,6 @@ Donations help us keeping the [**VulNyx**](https://vulnyx.com) project active. T
 
 [![Buy Me a Coffee](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/vulnyx)
 
----
-
 ### Disclaimer
 
 > ##### WARNING
@@ -54,7 +52,8 @@ Donations help us keeping the [**VulNyx**](https://vulnyx.com) project active. T
 > The [VulNyx](https://vulnyx.com) team is not responsible for any misuse or damage caused to third party systems or infrastructure.
 {: .block-warning }
 
-<br><br>
+---
+
 <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
   <img src="/assets/gitbook/images/favicon.png" style="width: 30px; height: auto; margin-right: 6px;">
   <span style="color: #ffffffa4;">© VulNyx 2023-2025</span>
