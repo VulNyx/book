@@ -113,7 +113,7 @@ ssh -i id_rsa low@192.168.1.2 -t 'bash --noprofile'
 
 ### Compilate Binary
 
-**Windows**
+##### Windows
 
 ```bash
 # apt-get install mingw-w64
@@ -121,7 +121,7 @@ i686-w64-mingw32-gcc main.c -o binary.exe        # x86 - 32 bits
 x86_64-w64-mingw32-gcc main.c -o binary.exe      # x64 - 64 bits
 ```
 
-**Linux**
+##### Linux
 
 ```bash
 gcc -m32 main.c -o binary      # x86 - 32 bits
