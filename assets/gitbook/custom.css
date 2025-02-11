@@ -31,6 +31,7 @@
 
 .book-body .body-inner .page-wrapper {
     min-height: calc(100% - 46px);
+    background: #151515;
 }
 
 .book-body .body-inner .page-wrapper .page-inner {
