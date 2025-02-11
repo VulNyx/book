@@ -6,24 +6,19 @@ layout: post
 
 ### Enumeration
 
-```ruby
+```bash
 # username
 whoami
-
 # user groups
 id
-
 # connected users
 w
-
 # machine name
 hostname
-
 # os & kernel
 uname -a
 hostnamectl
 lsb_release -a
-
 # list files and folders
 ls
 ls -l
@@ -31,7 +26,7 @@ ls -la
 ls -laR
 tree
 tree -fas
-
+# file size
 du -hc filename
 du -hc *
 
@@ -46,11 +41,9 @@ ps -eo command
 ps -eo command "root"
 ```
 
----
-
 ### Network
 
-```ruby
+```bash
 ip a
 ip -4 a
 ip -6 a
@@ -82,11 +75,9 @@ fuser 65000/tcp
 fuser -k 3306/tcp
 ```
 
----
-
 ### Interesting Files
 
-```ruby
+```bash
 /etc/passwd
 /etc/shadow
 /etc/hosts
@@ -109,23 +100,19 @@ fuser -k 3306/tcp
 /etc/apache2/apache2.conf
 ```
 
----
-
 ### Restricted Bash (rbash) [Escape]
 
-```ruby
+```bash
 ssh low@192.168.1.2 -t 'bash --noprofile'
 ssh low@192.168.1.2 bash
 ssh -i id_rsa low@192.168.1.2 -t 'bash --noprofile'
 ```
 
----
-
 ### Compilate Binary
 
 **Windows**
 
-```ruby
+```bash
 # apt-get install mingw-w64
 i686-w64-mingw32-gcc main.c -o binary.exe        # x86 - 32 bits
 x86_64-w64-mingw32-gcc main.c -o binary.exe      # x64 - 64 bits
@@ -133,7 +120,7 @@ x86_64-w64-mingw32-gcc main.c -o binary.exe      # x64 - 64 bits
 
 **Linux**
 
-```ruby
+```bash
 gcc -m32 main.c -o binary      # x86 - 32 bits
 gcc main.c -o binary           # x64 - 64 bits
 
@@ -142,11 +129,14 @@ gcc main.c -o binary -static   # fix errors
 
 **Go**
 
-```ruby
+```bash
 go build .                     # default (no compress)
 
 go build  -ldflags '-s -w' .   # compress
 upx binary
 ```
 
----
+<div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
+  <img src="/assets/gitbook/images/favicon.png" style="width: 30px; height: auto; margin-right: 6px;">
+  <span style="color: #ffffffa4;">© VulNyx 2023-2025</span>
+</div>
