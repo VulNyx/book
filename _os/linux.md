@@ -29,12 +29,12 @@ tree -fas
 # file size
 du -hc filename
 du -hc *
-
+# environment variables
 env
 set
 history
 alias
-
+# processes
 ps aux
 ps -faux
 ps -eo command
@@ -44,12 +44,15 @@ ps -eo command "root"
 ### Network
 
 ```bash
+# all
 ip a
-ip -4 a
-ip -6 a
-ip a show eth0
-
 ifconfig
+# ipv4
+ip -4 a
+# ipv6
+ip -6 a
+# interface eth0
+ip a show eth0
 
 cat /proc/net/arp
 
