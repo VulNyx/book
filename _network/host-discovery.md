@@ -6,41 +6,41 @@ layout: post
 
 ### Linux
 
-##### Nmap
+#### Nmap
 
 ```ruby
 # apt install -y nmap
 nmap -sn 192.168.1.0/24
 ```
 
-##### Fping
+#### Fping
 
 ```ruby
 # apt install -y fping
 fping -aqg 192.168.1.0/24
 ```
 
-##### Netdiscover
+#### Netdiscover
 
 ```ruby
 # apt install -y netdiscover
 netdiscover -i eth0 -r 192.168.1.0/24
 ```
 
-##### arp-scan
+#### arp-scan
 
 ```ruby
 # apt install -y arp-scan
 arp-scan -I eth0 -l
 ```
 
-##### Ping
+#### Ping
 
 ```ruby
 for i in $(seq 1 254); do (ping -c 1 192.168.1.${i} | grep "bytes from" | awk '{print $4}' | tr -d ':' &); done;
 ```
 
-##### Bash
+#### Bash
 
 Network Segments: `1`
 
@@ -75,14 +75,14 @@ done
 
 ### Windows
 
-##### CMD
+#### CMD
 
 ```ruby
 for /l %i in (1,1,254) do @ping -4 -n 1 -w 100 192.168.1.%i | findstr TTL
 for /L %a IN (1,1,254) DO @(ping -n 1 -w 1 192.168.1.%a | findstr "TTL=" > nul && echo 192.168.1.%a)
 ```
 
-##### PowerShell
+#### PowerShell
 
 ```ruby
 1..254 | % {ping -4 -n 1 -w 100 X.X.X.$_} | Select-String TTL
@@ -91,7 +91,7 @@ for /L %a IN (1,1,254) DO @(ping -n 1 -w 1 192.168.1.%a | findstr "TTL=" > nul &
 
 ---
 
-#### Disclaimer
+### Disclaimer
 
 > ##### WARNING
 > All techniques presented in this blog are for educational and ethical purposes.  
@@ -101,6 +101,5 @@ for /L %a IN (1,1,254) DO @(ping -n 1 -w 1 192.168.1.%a | findstr "TTL=" > nul &
 <br><br>
 <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
   <img src="/assets/gitbook/images/favicon.png" style="width: 30px; height: auto; margin-right: 6px;">
-  <span>© VulNyx 2023-2025</span>
+  <span style="color: #ffffffa4;">© VulNyx 2023-2025</span>
 </div>
-
