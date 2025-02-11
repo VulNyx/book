@@ -2993,10 +2993,14 @@ table {
   white-space: pre;
   background: 0 0;
 }
+
+/*
 .markdown-section pre > code:after,
 .markdown-section pre > code:before {
   content: normal;
 }
+*/
+
 .markdown-section code {
   padding: 0.2em;
   margin: 0;
