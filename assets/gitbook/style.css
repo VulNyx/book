@@ -3003,11 +3003,15 @@ table {
   font-size: 0.85em;
   background-color: #ffffff1A;
 }
+
+/*
 .markdown-section code:after,
 .markdown-section code:before {
   letter-spacing: -0.2em;
   content: "\00a0";
 }
+*/
+
 .markdown-section table {
   display: table;
   width: 100%;
