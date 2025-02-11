@@ -4,7 +4,7 @@ date: 0021-01-01
 layout: post
 ---
 
-### Basic Infomation
+### Overview
 
 [**File Transfer Protocol (FTP)**](https://en.wikipedia.org/wiki/File_Transfer_Protocol) is a standard network protocol used to transfer files from one host to another over a TCP-based network, such as the internet.  
 
