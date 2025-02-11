@@ -241,7 +241,7 @@ systemctl status vsftpd
 
 > ##### WARNING
 > All techniques present in this blog are for educational, ethical or CTFs play solving purposes.  
-> The [**VulNyx**](https://vulnyx.com) team is not responsible for any misuse or damage caused to third party systems or infrastructure under any circumstances.
+> The [**VulNyx**](https://vulnyx.com) team is not responsible for any misuse or damage caused to third-party systems or infrastructure.
 {: .block-warning }
 
 <br><br>
