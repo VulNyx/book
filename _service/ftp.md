@@ -14,7 +14,7 @@ PORT   STATE SERVICE
 21/tcp open  ftp
 ```
  
-When [Nmap](https://nmap.org) does not get the service header, it uses the [IANA](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) db to determine the name of the service associated with that port.
+When [**Nmap**](https://nmap.org) does not get the service header, it uses the [**IANA**](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) db to determine the name of the service associated with that port.
 
 ---
 
@@ -33,7 +33,7 @@ nmap -p21 --script="ftp-*" 192.168.1.2
 
 #### Pasive
 
-##### [Shodan](https://shodan.io)
+##### [**Shodan**](https://shodan.io)
 
 ```bash
 port:21
@@ -96,7 +96,7 @@ ncftp -u peter -p 'Passw0rd' -P 1234 192.168.1.2
 
 #### Log Poisoning
 
-If it detects a **Local File Inclusion (LFI)** and manages to read the `/etc/passwd` file.  
+If it detects a **Local File Inclusion (LFI)** and manages to read the **`/etc/passwd`** file.  
 
 > ##### WARNING
 > You should also verify that **port 21 (FTP)** is in the **open** state.
@@ -106,7 +106,7 @@ If it detects a **Local File Inclusion (LFI)** and manages to read the `/etc/pas
 file.php?file=/etc/passwd
 ```
 
-If we can read the **FTP log file** located at `/var/log/vsftpd.log`.
+If we can read the **FTP log file** located at **`/var/log/vsftpd.log`**.
 
 ```bash
 file.php?file=/var/log/vsftpd.log
@@ -130,7 +130,7 @@ file.php?file=/var/log/vsftpd.log&cmd=id
 
 #### Password
 
-If you got a `username` and need the `password` this is the way.
+If you got a **`username`** and need the **`password`** this is the way.
 
 ```bash
 # default port (21)
@@ -144,7 +144,7 @@ hydra -t 64 -l peter -P rockyou.txt ftp://192.168.1.2:1234 -f -I
 
 #### Username
 
-If you have a `password` and need the `username` this is the way.
+If you have a **`password`** and need the **`username`** this is the way.
 
 ```bash
 # default port (21)
