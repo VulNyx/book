@@ -13,7 +13,6 @@
 .book.with-summary .book-body .book-header {
     position: fixed;
     width: calc(100% - 300px);
-    background-color: #262626;
 }
 
 .book-body .body-inner {
@@ -32,7 +31,7 @@
 
 .book-body .body-inner .page-wrapper {
     min-height: calc(100% - 46px);
-    background: #151515;
+    background-color: #151515;
 }
 
 .book-body .body-inner .page-wrapper .page-inner {
@@ -53,7 +52,7 @@
 
 .book .book-body .book-header {
     /*background: #ffffff;*/
-    background: #262626;
+    background-color: #262626;
 }
 
 .book.color-theme-1 .book-body .book-header {
