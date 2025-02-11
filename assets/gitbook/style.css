@@ -2970,7 +2970,8 @@ table {
   margin: 0;
   padding: 0;
   border: none;
-  color: inherit;
+  color: #00BB00;
+  background-color: #fffffff4;
 }
 .markdown-section pre {
   overflow: auto;
