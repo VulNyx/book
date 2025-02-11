@@ -93,7 +93,7 @@ for /L %a IN (1,1,254) DO @(ping -n 1 -w 1 192.168.1.%a | findstr "TTL=" > nul &
 
 #### Disclaimer
 
-> ##### WARNING
+> ###### WARNING
 > All techniques presented in this blog are for educational and ethical purposes.  
 > The [VulNyx](https://vulnyx.com) team is not responsible for any misuse or damage caused to third party systems or infrastructure.
 {: .block-warning }
