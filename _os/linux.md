@@ -107,7 +107,9 @@ fuser -k 3306/tcp
 /etc/apache2/apache2.conf
 ```
 
-### Restricted Bash (rbash) [Escape]
+### Restricted Bash (rbash)
+
+Some ways to escape restricted context in shell.
 
 ```bash
 ssh low@192.168.1.2 -t 'bash --noprofile'
