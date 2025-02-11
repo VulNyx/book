@@ -6,7 +6,7 @@ layout: post
 
 ### Basic Infomation
 
-**File Transfer Protocol (FTP)** is a standard network protocol used to transfer files from one host to another over a TCP-based network, such as the internet.  
+[**File Transfer Protocol (FTP)**](https://en.wikipedia.org/wiki/File_Transfer_Protocol) is a standard network protocol used to transfer files from one host to another over a TCP-based network, such as the internet.  
 **Default Port: `21`**  
 ```bash
 PORT   STATE SERVICE
@@ -25,7 +25,7 @@ When [Nmap](https://nmap.org) does not get the service header, it uses the [IANA
 nc -vn 192.168.1.2 21
 timeout 0.1 bash -c "nc -nv 192.168.1.2 21"
 nmap -p21 -sS 192.168.1.2
-nmap -p21 -sVC -p21 192.168.1.2
+nmap -p21 -sVC 192.168.1.2
 nmap -p21 --script="ftp-anon" 192.168.1.2
 nmap -p21 --script="ftp-*" 192.168.1.2
 ```
