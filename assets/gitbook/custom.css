@@ -210,7 +210,8 @@
 
 .markdown-section blockquote.block-warning {
     border-color: var(--c-warning);
-    background-color: var(--c-warning-bg);
+    /*background-color: var(--c-warning-bg);*/
+    background-color: #ffffff1A;
     color: var(--c-warning-text);
     font-family: var(--font-family);
     padding: 10px;
