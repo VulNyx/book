@@ -2982,7 +2982,7 @@ table {
   margin-bottom: 1.275em;
   background: #f7f7f7;
 }
-.markdown-section pre {
+.markdown-section pre > code {
   display: inline;
   max-width: initial;
   padding: 0;
