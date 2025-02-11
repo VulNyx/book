@@ -6,7 +6,7 @@ layout: post
 
 ### Enumeration
 
-```ruby
+```bash
 # sudo
 sudo -l
 # If when performing the previous step it tells you that sudo is not found
@@ -31,19 +31,17 @@ find / -writable -user low 2>/dev/null
 
 If I identify a **binary** with `suid` or `sudo` **permissions** [**GTFOBins**](https://gtfobins.github.io) is the way.
 
----
-
 ### Cron (Task)
 
 View `cron` jobs defined in **global file**:
 
-```ruby
+```bash
 cat /etc/crontab
 ```
 
 If tasks have been defined in the individual file that each user has with `crontab -e`, it is necessary to monitor with specific tools.
 
-**pspy**
+#### pspy
 
 Use [**pspy**](https://github.com/DominicBreuker/pspy) tool to **monitor tasks**.
 
@@ -54,11 +52,11 @@ low@vulnyx:/dev/shm$ chmod +x pspy64
 low@vulnyx:/dev/shm$ ./pspy64
 ```
 
-**Bash**
+#### Bash
 
 You can also use `bash` and do it manually.
 
-```ruby
+```bash
 #!/bin/bash
 
 old=$(ps -eo command)
@@ -76,8 +74,6 @@ while true; do
   old=$new
 done
 ```
-
----
 
 ### Groups
 
@@ -194,13 +190,11 @@ low@vulnyx:~$ /bin/bash -pi
 
 ### Wilcard
 
----
-
 ### /etc/passwd (Writable)
 
 If a low-privileged user has **write permissions** to the `/etc/passwd` file, an attacker can remove the `x` (on the **root** user line) and add a **hash**, this will cause the file that validates credentials to change from `/etc/shadow` to `/etc/passwd`.
 
-```ruby
+```bash
 # Check Permissions
 low@vulnyx:~$ ls -l /etc/passwd
 -rw----rw- 1 root root 1395 abr 21 20:16 /etc/passwd
@@ -224,16 +218,6 @@ root@vulnyx:~# id
 uid=0(root) gid=0(root) grupos=0(root)
 ```
 
----
-
-#### Disclaimer
-
-> ##### WARNING
-> All techniques presented in this blog are for educational and ethical purposes.  
-> The [VulNyx](https://vulnyx.com) team is not responsible for any misuse or damage caused to third party systems or infrastructure.
-{: .block-warning }
-
-<br><br>
 <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
   <img src="/assets/gitbook/images/favicon.png" style="width: 30px; height: auto; margin-right: 6px;">
   <span>© VulNyx 2023-2025</span>
