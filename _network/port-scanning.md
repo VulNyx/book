@@ -76,26 +76,27 @@ run
 
 #### UDP
 
-```ruby
-nmap -sUVC -p1-100 192.168.1.2
-nmap -sUVC -p101-200 192.168.1.2
-nmap -sUVC -p69,161 192.168.1.2
+```bash
 nmap -sU --top-ports="10" 192.168.1.2
 nmap -sU --top-ports="20" 192.168.1.2
 nmap -sU --top-ports="30" 192.168.1.2
 nmap -sU --top-ports="40" 192.168.1.2
 nmap -sU --top-ports="50" 192.168.1.2
 nmap -sU --top-ports="100" 192.168.1.2
+
+nmap -sUVC -p1-100 192.168.1.2
+nmap -sUVC -p101-200 192.168.1.2
+nmap -sUVC -p69,161 192.168.1.2
 ```
 
 #### SCTP
 
-```ruby
+```bash
 nmap -n -Pn -sY -p- --min-rate="5000" 192.168.1.2
 ```
-The `SCTP` port must be converted to `TCP`, this is necessary to be able to access the service normally since many services are not compatible with this protocol.
+The **`SCTP`** port must be converted to **`TCP`**, this is necessary to be able to access the service normally since many services are not compatible with this protocol.
 
-```ruby
+```bash
 socat TCP-LISTEN:8081,fork SCTP:192.168.1.2:8080
 ```
 
@@ -105,7 +106,7 @@ socat TCP-LISTEN:8081,fork SCTP:192.168.1.2:8080
 
 #### TCP
 
-```ruby
+```bash
 nmap -n -Pn -sVC -p<PORTS> 192.168.1.2                      # ipv4
 nmap -n -Pn -sVC -p<PORTS> -6 fe80::a00:27ff:fe7b:77f7      # ipv6
 proxychains nmap -p<PORTS> -sTVC 127.0.0.1 2>/dev/null      # tunnel / proxy (proxychains)
@@ -116,13 +117,13 @@ timeout 0.1 bash -c "nc -nv 192.168.1.2 <PORT>"             # banner grabbing
 
 #### UDP
 
-```ruby
+```bash
 nmap -sU -sVC -p161,500 192.168.1.2
 ```
 
 #### SCTP
 
-```ruby
+```bash
 nmap -p22,80,8080 -sYVC 192.168.1.2
 ```
 
@@ -144,9 +145,9 @@ The relevant output formats and parameters are:
 
 <br>
 
-The `-oX (XML)` format can be converted to **HTML** with `xsltproc`, we raise an **HTTP** server to display the new **HTML** file in an attractive way.
+The **`-oX (XML)`** format can be converted to **HTML** with **`xsltproc`**, we raise an **HTTP** server to display the new **HTML** file in an attractive way.
 
-```ruby
+```bash
 # apt install -y xsltproc
 xsltproc nmap.xml >/var/www/html/index.html ; service apache2 start
 ```
@@ -155,7 +156,7 @@ xsltproc nmap.xml >/var/www/html/index.html ; service apache2 start
 
 ### Function (copy-ports)
 
-Function to add to `.bashrc` or `.zshrc` to **copy open ports** from an **nmap file**.
+Function to add to **`.bashrc`** or **`.zshrc`** to **copy open ports** from an **nmap file**.
 
 ```bash
 copy-ports () {
