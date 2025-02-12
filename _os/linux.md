@@ -90,6 +90,8 @@ fuser -k 3306/tcp
 
 ### Interesting Files
 
+#### System
+
 ```bash
 /etc/passwd
 /etc/shadow
@@ -100,13 +102,28 @@ fuser -k 3306/tcp
 /etc/sudoers
 /etc/crontab
 /etc/group
+```
 
+#### Keys
+
+```bash
 /home/user/.ssh/id_rsa
-/root/.ssh/id_rsa
+/home/user/.ssh/authorized_keys
 
+/root/.ssh/id_rsa
+/root/.ssh/authorized_keys
+```
+
+#### SSH
+
+```bash
 /etc/ssh/sshd_config
 /var/log/auth.log
+```
 
+#### Apache
+
+```bash
 /var/log/apache2/access.log
 /var/log/apache2/error.log
 /etc/apache2/sites-available/000-default.conf
@@ -118,6 +135,8 @@ fuser -k 3306/tcp
 ### Restricted Bash (rbash)
 
 Some ways to escape restricted context in shell.
+
+#### Escape (Bypass)
 
 ```bash
 ssh low@192.168.1.2 -t 'bash --noprofile'
