@@ -8,6 +8,8 @@ layout: post
 
 [Linux](https://en.wikipedia.org/wiki/Linux) is a family of open source [Unix](https://en.wikipedia.org/wiki/Unix)-like **operating systems** based on the [Linux](https://en.wikipedia.org/wiki/Linux) kernel, an operating system kernel first released on September 17, 1991, by [Linus Torvalds](https://es.wikipedia.org/wiki/Linus_Torvalds).
 
+---
+
 ### Enumeration
 
 ```bash
@@ -44,6 +46,8 @@ ps -faux
 ps -eo command
 ps -eo command "root"
 ```
+
+---
 
 ### Network
 
@@ -82,6 +86,8 @@ fuser 65000/tcp
 fuser -k 3306/tcp
 ```
 
+---
+
 ### Interesting Files
 
 ```bash
@@ -107,6 +113,8 @@ fuser -k 3306/tcp
 /etc/apache2/apache2.conf
 ```
 
+---
+
 ### Restricted Bash (rbash)
 
 Some ways to escape restricted context in shell.
@@ -116,6 +124,8 @@ ssh low@192.168.1.2 -t 'bash --noprofile'
 ssh low@192.168.1.2 bash
 ssh -i id_rsa low@192.168.1.2 -t 'bash --noprofile'
 ```
+
+---
 
 ### Compilate Binary
 
@@ -144,6 +154,8 @@ go build .                     # default (no compress)
 go build  -ldflags '-s -w' .   # compress
 upx binary
 ```
+
+---
 
 <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
   <img src="/assets/gitbook/images/favicon.png" style="width: 30px; height: auto; margin-right: 6px;">
