@@ -5,7 +5,7 @@ layout: post
 ---
 
 <p align="center">
-  <img src="assets/gitbook/images/Linux.jpg" width="100%">
+  <img src="/assets/gitbook/images/Linux.jpg" width="100%">
 </p>
 
 ### Overview
