@@ -3034,11 +3034,11 @@ table {
   border: 1px solid #ddd;
 }
 .markdown-section table tr {
-  background-color: #fff;
+  background-color: #262626;
   border-top: 1px solid #ccc;
 }
 .markdown-section table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: #262626;
 }
 .markdown-section table th {
   font-weight: 700;
