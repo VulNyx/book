@@ -157,7 +157,7 @@ xsltproc nmap.xml >/var/www/html/index.html ; service apache2 start
 
 ### Function (copy-ports)
 
-Function to add to **`.bashrc`** or **`.zshrc`** to **copy open ports** from an **nmap file**.
+Function to add to **`.bashrc`** or **`.zshrc`** to **copy open ports** from an [**nmap**](https://nmap.org) **file**.
 
 ```bash
 copy-ports () {
