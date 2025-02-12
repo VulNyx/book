@@ -29,12 +29,11 @@ When [**Nmap**](https://nmap.org) does not get the service header, it uses the [
 ```bash
 nc -vn 192.168.1.2 23
 timeout 0.1 bash -c "nc -nv 192.168.1.2 23"
-nmap -p22 -sS 192.168.1.2
-nmap -p22 -sVC 192.168.1.2
+nmap -p23 -sS 192.168.1.2
+nmap -p23 -sVC 192.168.1.2
 
-
-nmap -p21 --script="ftp-anon" 192.168.1.2
-nmap -p21 --script="ftp-*" 192.168.1.2
+nmap -p23 --script="telnet-encryption" 192.168.1.2
+nmap -p23 --script="telnet-ntlm-info" 192.168.1.2
 ```
 
 #### Pasive
@@ -42,41 +41,14 @@ nmap -p21 --script="ftp-*" 192.168.1.2
 ##### [**Shodan**](https://shodan.io)
 
 ```bash
-port:21
-port:21 vsftpd
-port:21 proftpd 1.3.5
-port:21 os:"Linux"
-port:21 os:"Windows"
-port:21 country:"US"
-port:21 country:"US" os:"Linux"
-port:21 hostname:"ftp.domain.tld"
+port:23
+port:23 telnetd
+port:23 country:"US"
 ```
 
 ---
 
 ### Usage & Commands
-
-```bash
-# upload file
-put cmd.php
-# upload all files
-mput *
-# download
-get config.php
-# download all files
-prompt off
-mget *
-# binary mode enable
-binary
-# exit
-bye
-# rename file
-ftp> rename cmd.php
-(to-name) cmd.php5
-# read files from ftp
-ftp> less .htaccess
-ftp> more .htaccess
-```
 
 #### Connect
 
