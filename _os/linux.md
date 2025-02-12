@@ -4,10 +4,6 @@ date: 0002-01-01
 layout: post
 ---
 
-<p align="center">
-  <img src="/assets/gitbook/images/Linux.jpg" width="100%">
-</p>
-
 ### Overview
 
 [**Linux**](https://en.wikipedia.org/wiki/Linux) is a family of open source [**Unix**](https://en.wikipedia.org/wiki/Unix)-like **operating systems** based on the [**Linux**](https://en.wikipedia.org/wiki/Linux) kernel, an operating system kernel first released on September 17, 1991, by [**Linus Torvalds**](https://es.wikipedia.org/wiki/Linus_Torvalds).
