@@ -172,7 +172,6 @@ copy-ports () {
 
 ---
 
-<br><br>
 <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
   <img src="/assets/gitbook/images/favicon.png" style="width: 30px; height: auto; margin-right: 6px;">
   <span>© VulNyx 2023-2025</span>
