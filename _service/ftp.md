@@ -29,6 +29,10 @@ nmap -p21 -sS 192.168.1.2
 nmap -p21 -sVC 192.168.1.2
 nmap -p21 --script="ftp-anon" 192.168.1.2
 nmap -p21 --script="ftp-*" 192.168.1.2
+
+# ftps
+openssl s_client -connect 192.168.1.2:21
+openssl s_client -connect 192.168.1.2:21 -starttls ftp
 ```
 
 #### Pasive
