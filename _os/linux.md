@@ -6,7 +6,7 @@ layout: post
 
 ### Overview
 
-[Linux](https://en.wikipedia.org/wiki/Linux) is a family of open source [Unix](https://en.wikipedia.org/wiki/Unix)-like **operating systems** based on the [Linux](https://en.wikipedia.org/wiki/Linux) kernel, an operating system kernel first released on September 17, 1991, by [Linus Torvalds](https://es.wikipedia.org/wiki/Linus_Torvalds).
+[**Linux**](https://en.wikipedia.org/wiki/Linux) is a family of open source [**Unix**](https://en.wikipedia.org/wiki/Unix)-like **operating systems** based on the [**Linux**](https://en.wikipedia.org/wiki/Linux) kernel, an operating system kernel first released on September 17, 1991, by [**Linus Torvalds**](https://es.wikipedia.org/wiki/Linus_Torvalds).
 
 ---
 
@@ -121,9 +121,10 @@ fuser -k 3306/tcp
 /var/log/auth.log
 ```
 
-#### Apache
+#### Apache & Nginx
 
 ```bash
+/var/www/html
 /var/log/apache2/access.log
 /var/log/apache2/error.log
 /etc/apache2/sites-available/000-default.conf
@@ -134,9 +135,9 @@ fuser -k 3306/tcp
 
 ### Restricted Bash (rbash)
 
-Some ways to escape restricted context in shell.
-
 #### Escape (Bypass)
+
+Some ways to escape restricted context in shell.
 
 ```bash
 ssh low@192.168.1.2 -t 'bash --noprofile'
