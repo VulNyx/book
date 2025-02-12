@@ -10,35 +10,35 @@ layout: post
 
 ##### Nmap
 
-```ruby
+```bash
 nmap -n -Pn -sS -p- --min-rate="5000" 192.168.1.2                    # ipv4
 nmap -n -Pn -sS -p- --min-rate="5000" -6 fe80::a00:27ff:fe7b:77f7    # ipv6
 proxychains nmap -n -Pn -sT -p- --min-rate="5000" 192.168.1.2        # tunnel / proxy (proxychains)
 ```
 
-**Xargs**
+##### Xargs
 
-```ruby
+```bash
 seq 1 65535 | xargs -P 50 -I {} bash -c 'echo "" > /dev/tcp/192.168.1.2/{} &>/dev/null && echo -e "[+] Port: {} OPEN"' 2>/dev/null
 ```
 
-**Netcat**
+##### Netcat
 
-```ruby
+```bash
 nc -zvw 1 192.168.1.2 1-65535
 ```
 
-**PowerShell**
+##### PowerShell
 
-```ruby
+```bash
 1..65535 | % {echo ((New-Object Net.Sockets.TcpClient).Connect("192.168.1.2", $_)) "TCP port $_ is open"} 2>$null
 ```
 
-**Bash**
+##### Bash
 
-Host
+**Host**
 
-```ruby
+```bash
 #!/bin/bash
 
 echo -e "\n[!] Start Discovery:"
@@ -48,9 +48,9 @@ for port in $(seq 1 65535); do
 done; wait
 ```
 
-Hosts
+**Hosts**
 
-```ruby
+```bash
 #!/bin/bash
 
 hosts=("192.168.1.2" "192.168.1.3" "192.168.1.4" "192.168.1.5")
@@ -63,9 +63,9 @@ for host in ${hosts[@]}; do
 done
 ```
 
-**Metasploit**
+##### Metasploit
 
-```ruby
+```bash
 use auxiliary/scanner/portscan/tcp
 show options
 set PORTS 1-65535
@@ -157,7 +157,7 @@ xsltproc nmap.xml >/var/www/html/index.html ; service apache2 start
 
 Function to add to `.bashrc` or `.zshrc` to **copy open ports** from an **nmap file**.
 
-```ruby
+```bash
 copy-ports () {
   if [ -n "$1" ]
   then
@@ -169,13 +169,6 @@ copy-ports () {
 ```
 
 ---
-
-#### Disclaimer
-
-> ##### WARNING
-> All techniques presented in this blog are for educational and ethical purposes.  
-> The [VulNyx](https://vulnyx.com) team is not responsible for any misuse or damage caused to third party systems or infrastructure.
-{: .block-warning }
 
 <br><br>
 <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
