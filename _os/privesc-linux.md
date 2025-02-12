@@ -29,23 +29,25 @@ find / -writable 2>/dev/null | grep -viE "proc|sys|dev"
 find / -writable -user low 2>/dev/null
 ```
 
-If I identify a **binary** with `suid` or `sudo` **permissions** [**GTFOBins**](https://gtfobins.github.io) is the way.
+If I identify a **binary** with **`suid`** or **`sudo`** **permissions** [**GTFOBins**](https://gtfobins.github.io) is the way.
+
+---
 
 ### Cron (Task)
 
-View `cron` jobs defined in **global file**:
+View **`cron`** jobs defined in **global file**:
 
 ```bash
 cat /etc/crontab
 ```
 
-If tasks have been defined in the individual file that each user has with `crontab -e`, it is necessary to monitor with specific tools.
+If tasks have been defined in the individual file that each user has with **`crontab -e`**, it is necessary to monitor with specific tools.
 
 #### pspy
 
 Use [**pspy**](https://github.com/DominicBreuker/pspy) tool to **monitor tasks**.
 
-```ruby
+```bash
 low@vulnyx:~$ cd /dev/shm
 low@vulnyx:/dev/shm$ wget -q --no-check-certificate "https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64"
 low@vulnyx:/dev/shm$ chmod +x pspy64
@@ -54,7 +56,7 @@ low@vulnyx:/dev/shm$ ./pspy64
 
 #### Bash
 
-You can also use `bash` and do it manually.
+You can also use **`bash`** and do it manually.
 
 ```bash
 #!/bin/bash
@@ -75,13 +77,15 @@ while true; do
 done
 ```
 
+---
+
 ### Groups
 
 #### sudo
 
-When a user is part of the `sudo` **group**, he can run any command as the `root` user.
+When a user is part of the **`sudo`** **group**, he can run any command as the **`root`** user.
 
-```ruby
+```bash
 # Check Group
 low@vulnyx:~$ id
 uid=1000(low) gid=1000(low) groups=1000(low),27(sudo)
@@ -94,9 +98,9 @@ uid=0(root) gid=0(root) groups=0(root)
 
 #### disk
 
-When a user is part of a `disk` **group**, he or she is granted direct access to the system **disks** and **partitions**.
+When a user is part of a **`disk`** **group**, he or she is granted direct access to the system **disks** and **partitions**.
 
-```ruby
+```bash
 # Check Group
 low@vulnyx:~$ id
 uid=1000(low) gid=1000(low) groups=1000(low),6(disk)
@@ -121,9 +125,9 @@ NhAAAAAwEAAQAAAQEAstkGmc1W+epM0w13VQrLO/wMNWwxFltotpa9elYJVXSlBc+PgF6I
 
 #### adm
 
-When a user is part of the `adm` **group**, he can **read log files** on the system.
+When a user is part of the **`adm`** **group**, he can **read log files** on the system.
 
-```ruby
+```bash
 # Check Group
 low@vulnyx:~$ id
 uid=1000(low) gid=1000(low) groups=1000(low),4(adm)
@@ -134,9 +138,9 @@ low@vulnyx:~$ grep --color -Eri "pass|password|secret|db" /var/log 2>/dev/null
 
 #### docker
 
-When a user is part of the `docker` **group**, they have the ability to **manage containers**.
+When a user is part of the **`docker`** **group**, they have the ability to **manage containers**.
 
-```ruby
+```bash
 # Check Group
 low@vulnyx:~$ id
 uid=1000(low) gid=1000(low) groups=1000(low),109(docker)
@@ -190,9 +194,11 @@ low@vulnyx:~$ /bin/bash -pi
 
 ### Wilcard
 
+---
+
 ### /etc/passwd (Writable)
 
-If a low-privileged user has **write permissions** to the `/etc/passwd` file, an attacker can remove the `x` (on the **root** user line) and add a **hash**, this will cause the file that validates credentials to change from `/etc/shadow` to `/etc/passwd`.
+If a low-privileged user has **write permissions** to the **`/etc/passwd`** file, an attacker can remove the **`x`** (on the **root** user line) and add a **hash**, this will cause the file that validates credentials to change from **`/etc/shadow`** to **`/etc/passwd`**.
 
 ```bash
 # Check Permissions
@@ -217,6 +223,8 @@ Password:
 root@vulnyx:~# id
 uid=0(root) gid=0(root) grupos=0(root)
 ```
+
+---
 
 <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
   <img src="/assets/gitbook/images/favicon.png" style="width: 30px; height: auto; margin-right: 6px;">
