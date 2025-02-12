@@ -131,6 +131,7 @@ nmap -p22,80,8080 -sYVC 192.168.1.2
 
 ### Output (Nmap)
 
+The relevant [**nmap**](https://nmap.org) output formats and parameters are:
 The relevant output formats and parameters are:  
 
 <div class="table-wrapper" markdown="block">
