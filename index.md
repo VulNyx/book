@@ -22,7 +22,7 @@ Anyone can contribute by sharing methodologies, guides, fixes or new ideas to im
 If you know a technique or have information that is not here yet, or simply want to help improve the structure and content.  
 Your participation is more than welcome!  
 
-#### How to collaborate on the project?
+##### How to collaborate on the project?
 
 Contributing is easy, follow these steps to add new content or improve existing content:
 - 1- [Fork](https://github.com/VulNyx/vulnyx.github.io/forks) this repository.
@@ -38,6 +38,11 @@ Directory structure by categories:
 - [_web](https://github.com/VulNyx/vulnyx.github.io/tree/master/_web) - **Web Application** (Only attacks on web applications).
 - [_others](https://github.com/VulNyx/vulnyx.github.io/tree/master/_others) - **Others** (Topics without a specific category).
 
+##### Top contributors:
+
+<a href="https://github.com/vulnyx/vulnyx.github.io/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=vulnyx/vulnyx.github.io" />
+</a>
 
 ### Donate
 
