@@ -157,7 +157,9 @@ xsltproc nmap.xml >/var/www/html/index.html ; service apache2 start
 
 ### Function (copy-ports)
 
-Function to add to **`.bashrc`** or **`.zshrc`** to **copy open ports** from an [**nmap**](https://nmap.org) **file**.
+Function to add to **`.bashrc`** or **`.zshrc`** to **copy open ports** from an [**nmap**](https://nmap.org) **file**.  
+
+(Once the function is added to **`.bashrc`** & **`.zshrc`** it is **necessary to restart the terminal** for the **changes to be applied**.)
 
 ```bash
 # apt install -y xclip
