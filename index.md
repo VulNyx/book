@@ -48,7 +48,9 @@ Directory structure by categories:
 
 Donations help us keeping the [**VulNyx**](https://vulnyx.com) project active. Thank you for your collaboration.
 
-[![Buy Me a Coffee](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/vulnyx)
+<a href="https://ko-fi.com/vulnyx">
+    <img src="https://cdn.prod.website-files.com/5c14e387dab576fe667689cf/670f5a01cf2da94a032117b9_support_me_on_kofi_red-p-500.png" width="200">
+</a>
 
 ### Disclaimer
 
