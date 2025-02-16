@@ -1,5 +1,5 @@
 ---
-title: 🟢 21 FTP (TCP)
+title: 🟢 21 - FTP (TCP)
 date: 0021-01-01
 layout: post
 ---
