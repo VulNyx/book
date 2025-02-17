@@ -4,37 +4,54 @@ date: 0001-01-01
 layout: post
 ---
 
-### Fuzzing
+### Active
 
-#### Gobuster
+#### Fuzzing (Brute Force)
+
+##### Gobuster
 
 ```ruby
 gobuster vhost -w vhost.dic -u 'http://domain.tld' --append-domain
 ```
 
-#### Wfuzz
+##### Wfuzz
 
 ```ruby
 wfuzz -c -w vhost.dic -H 'Host: FUZZ.domain.tld' -u 'http://domain.tld/' --hh=186
 ```
 
-#### Ffuf
+##### Ffuf
 
 ```ruby
 ffuf -c -w vhost.dic -H 'Host: FUZZ.domain.tld' -u 'http://domain.tld/' -fs 186
 ```
 
+#### Wordlist
+
+##### [**SecLists**](https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS)
+
 ---
 
-### Wordlist
+### Pasive (OSINT)
 
-- [**subdomains-top1million-5000.txt**](https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Discovery/DNS/subdomains-top1million-5000.txt)
-- [**subdomains-top1million-20000.txt**](https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Discovery/DNS/subdomains-top1million-20000.txt)
-- [**subdomains-top1million-110000.txt**](https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Discovery/DNS/subdomains-top1million-110000.txt)
+#### Search Engine Hacking
+
+##### Google Dorks
+
+```ruby
+site:domain.tld
+site:*.domain.tld
+```
+
+##### [**VirusTotal**](https://www.virustotal.com)
+
+#### Certificate of Transparency
+
+##### [**crt.sh**](https://crt.sh/)
 
 ---
 
 <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
-  <img src="/assets/gitbook/images/favicon.png" style="width: 30px; height: auto; margin-right: 6px;">
-  <span style="color: #ffffffa4;">© VulNyx 2023-2025</span>
+  <img src="/assets/gitbook/images/d4t4s3c.jpg" style="width: 30px; height: auto; margin-right: 6px; border-radius: 5px;">
+  <span style="color: #ffffffa4;">© d4t4s3c 2025</span>
 </div>
