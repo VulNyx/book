@@ -21,7 +21,7 @@ wfuzz -c -w vhost.dic -H 'Host: FUZZ.domain.tld' -u 'http://domain.tld/' --hh=18
 #### Ffuf
 
 ```ruby
-❯ ffuf -c -w vhost.dic -H 'Host: FUZZ.domain.tld' -u 'http://domain.tld/' -fs 186
+ffuf -c -w vhost.dic -H 'Host: FUZZ.domain.tld' -u 'http://domain.tld/' -fs 186
 ```
 
 ---
