@@ -50,42 +50,8 @@ exclude:
   - _drafts
 
 collections:
-  os:
-    output: true
-    permalink: /:collection/:path/
-  network:
-    output: true
-    permalink: /:collection/:path/
-  service:
-    output: true
-    permalink: /:collection/:path/
-  ad:
-    output: true
-    permalink: /:collection/:path/
-  web:
-    output: true
-    permalink: /:collection/:path/
-  others:
-    output: true
-    permalink: /:collection/:path/
-  #pages:
-  #  output: true
-  #  permalink: /:collection/:path/
- 
-  #others:
-  #  output: true
-  #  permalink: /:collection/:path/
 
 ordered_collections:
-  - os
-  - network
-  - service
-  - ad
-  - web
-  - others
-  #- posts
-  #- pages
-  #- others
 
 # default 800px
 page_width: 1000px
